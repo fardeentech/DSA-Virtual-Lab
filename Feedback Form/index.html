@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Optional CSS -->
+</head>
+<body>
+    <div class="container">
+        <h1>Feedback Form</h1>
+        <form id="feedbackForm" onsubmit="sendFeedback(event)">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="suggestion">Suggestion:</label>
+            <textarea id="suggestion" name="suggestion" rows="4" required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+        <div id="message" style="margin-top: 20px;"></div>
+    </div>
+
+    <script>
+        function sendFeedback(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const email = document.getElementById("email").value;
+            const suggestion = document.getElementById("suggestion").value;
+
+            // Create a mailto link
+            const mailtoLink = `mailto:dhruvkrishnani07@gmail.com?subject=Feedback&body=Email: ${encodeURIComponent(email)}%0A%0ASuggestion: ${encodeURIComponent(suggestion)}`;
+
+            // Open the default email client
+            window.location.href = mailtoLink;
+
+            // Display a message to the user
+            document.getElementById("message").textContent = "Your feedback has been prepared in your email client.";
+        }
+    </script>
+</body>
+</html>
