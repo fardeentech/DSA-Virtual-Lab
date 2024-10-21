@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked List Pretest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Linked List Pretest</h1>
+<form id="quizForm">
+    <div class="question">
+        <p>1. What is a linked list?</p>
+        <label><input type="radio" name="q1" value="a"> a: A collection of elements stored in contiguous memory locations</label><br>
+        <label><input type="radio" name="q1" value="b"> b: A collection of elements stored in non-contiguous memory locations</label><br>
+        <label><input type="radio" name="q1" value="c"> c: A fixed-size data structure</label><br>
+        <label><input type="radio" name="q1" value="d"> d: A type of array</label>
+        <div id="explanation1" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>2. Which of the following is a disadvantage of linked lists?</p>
+        <label><input type="radio" name="q2" value="a"> a: Dynamic size</label><br>
+        <label><input type="radio" name="q2" value="b"> b: Efficient insertion/deletion</label><br>
+        <label><input type="radio" name="q2" value="c"> c: Requires extra memory for pointers</label><br>
+        <label><input type="radio" name="q2" value="d"> d: Random access of elements</label>
+        <div id="explanation2" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>3. What is a singly linked list?</p>
+        <label><input type="radio" name="q3" value="a"> a: A list where each node points to the next node</label><br>
+        <label><input type="radio" name="q3" value="b"> b: A list where each node points to both the next and previous nodes</label><br>
+        <label><input type="radio" name="q3" value="c"> c: A list that is sorted</label><br>
+        <label><input type="radio" name="q3" value="d"> d: A list that contains duplicate elements</label>
+        <div id="explanation3" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>4. In a doubly linked list, each node contains:</p>
+        <label><input type="radio" name="q4" value="a"> a: A data field and a pointer to the next node</label><br>
+        <label><input type="radio" name="q4" value="b"> b: Two pointers, one to the next node and one to the previous node</label><br>
+        <label><input type="radio" name="q4" value="c"> c: Only a pointer to the previous node</label><br>
+        <label><input type="radio" name="q4" value="d"> d: A data field and a size field</label>
+        <div id="explanation4" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>5. What is the time complexity for inserting a node at the beginning of a linked list?</p>
+        <label><input type="radio" name="q5" value="a"> a: O(n)</label><br>
+        <label><input type="radio" name="q5" value="b"> b: O(1)</label><br>
+        <label><input type="radio" name="q5" value="c"> c: O(log n)</label><br>
+        <label><input type="radio" name="q5" value="d"> d: O(n log n)</label>
+        <div id="explanation5" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>6. Which operation is typically more complex in a linked list compared to an array?</p>
+        <label><input type="radio" name="q6" value="a"> a: Insertion</label><br>
+        <label><input type="radio" name="q6" value="b"> b: Deletion</label><br>
+        <label><input type="radio" name="q6" value="c"> c: Accessing an element</label><br>
+        <label><input type="radio" name="q6" value="d"> d: Traversing</label>
+        <div id="explanation6" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>7. What happens when you delete a node from a linked list?</p>
+        <label><input type="radio" name="q7" value="a"> a: The memory is automatically deallocated</label><br>
+        <label><input type="radio" name="q7" value="b"> b: The pointers must be adjusted</label><br>
+        <label><input type="radio" name="q7" value="c"> c: The list becomes empty</label><br>
+        <label><input type="radio" name="q7" value="d"> d: The list cannot be modified</label>
+        <div id="explanation7" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>8. How do you find the length of a linked list?</p>
+        <label><input type="radio" name="q8" value="a"> a: By using a size attribute</label><br>
+        <label><input type="radio" name="q8" value="b"> b: By traversing the list</label><br>
+        <label><input type="radio" name="q8" value="c"> c: By using a recursive function</label><br>
+        <label><input type="radio" name="q8" value="d"> d: Both b and c</label>
+        <div id="explanation8" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>9. What is the main advantage of using a linked list over an array?</p>
+        <label><input type="radio" name="q9" value="a"> a: Better memory locality</label><br>
+        <label><input type="radio" name="q9" value="b"> b: Dynamic size</label><br>
+        <label><input type="radio" name="q9" value="c"> c: Easier access to elements</label><br>
+        <label><input type="radio" name="q9" value="d"> d: Lower memory overhead</label>
+        <div id="explanation9" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>10. What is the tail of a linked list?</p>
+        <label><input type="radio" name="q10" value="a"> a: The first node in the list</label><br>
+        <label><input type="radio" name="q10" value="b"> b: The last node in the list</label><br>
+        <label><input type="radio" name="q10" value="c"> c: A pointer to the next node</label><br>
+        <label><input type="radio" name="q10" value="d"> d: A special sentinel node</label>
+        <div id="explanation10" class="explanation"></div>
+    </div>
+    
+    <button type="button" class="submit-button" onclick="submitQuiz()">Submit</button>
+</form>
+<script src="script.js"></script>
+</body>
+</html>

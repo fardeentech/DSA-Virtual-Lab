@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+.container {
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+}
+
+label, input, button {
+    margin: 10px;
+    color: #333;
+}
+
+input {
+    background-color: #e9ecef;
+    color: #333;
+    border: 1px solid #6c757d;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.animation {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.step {
+    width: 100px;
+    height: 100px;
+    background-color: #ff070f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: all 0.5s ease;
+}
+
+.step.active {
+    opacity: 1;
+}
+
+.result {
+    margin-top: 30px;
+}
+
+#nextPrime {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+#hashTable {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 20px;
+}
+
+.hashBox {
+    border: 2px solid #007bff;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    transition: background-color 0.5s ease;
+    text-align: center;
+}
+
+.highlight {
+    background-color: #28a745;
+    color: white;
+}
+
+.dark-blue {
+    background-color: darkblue;
+    color: white;
+}

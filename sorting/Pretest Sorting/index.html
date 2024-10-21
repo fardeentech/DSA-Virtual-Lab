@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithms Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Sorting Algorithms Quiz</h1>
+<form id="quizForm">
+    <div class="question">
+        <p>1. What is the average time complexity of Quick Sort?</p>
+        <label><input type="radio" name="q1" value="a"> a: O(n log n)</label><br>
+        <label><input type="radio" name="q1" value="b"> b: O(n²)</label><br>
+        <label><input type="radio" name="q1" value="c"> c: O(n)</label><br>
+        <label><input type="radio" name="q1" value="d"> d: O(log n)</label>
+        <div id="explanation1" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>2. Which sorting algorithm is known for its worst-case time complexity of O(n log n) and is also stable?</p>
+        <label><input type="radio" name="q2" value="a"> a: Merge Sort</label><br>
+        <label><input type="radio" name="q2" value="b"> b: Bubble Sort</label><br>
+        <label><input type="radio" name="q2" value="c"> c: Quick Sort</label><br>
+        <label><input type="radio" name="q2" value="d"> d: Selection Sort</label>
+        <div id="explanation2" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>3. What is the main advantage of using Insertion Sort over other sorting algorithms?</p>
+        <label><input type="radio" name="q3" value="a"> a: It is always the fastest</label><br>
+        <label><input type="radio" name="q3" value="b"> b: It is stable and efficient for small data sets</label><br>
+        <label><input type="radio" name="q3" value="c"> c: It works well with linked lists</label><br>
+        <label><input type="radio" name="q3" value="d"> d: It does not require additional memory</label>
+        <div id="explanation3" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>4. Which of the following sorting algorithms is not a comparison-based sort?</p>
+        <label><input type="radio" name="q4" value="a"> a: Heap Sort</label><br>
+        <label><input type="radio" name="q4" value="b"> b: Merge Sort</label><br>
+        <label><input type="radio" name="q4" value="c"> c: Radix Sort</label><br>
+        <label><input type="radio" name="q4" value="d"> d: Quick Sort</label>
+        <div id="explanation4" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>5. Which sorting algorithm has the best performance for nearly sorted data?</p>
+        <label><input type="radio" name="q5" value="a"> a: Quick Sort</label><br>
+        <label><input type="radio" name="q5" value="b"> b: Insertion Sort</label><br>
+        <label><input type="radio" name="q5" value="c"> c: Selection Sort</label><br>
+        <label><input type="radio" name="q5" value="d"> d: Merge Sort</label>
+        <div id="explanation5" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>6. What is the worst-case time complexity of Bubble Sort?</p>
+        <label><input type="radio" name="q6" value="a"> a: O(n log n)</label><br>
+        <label><input type="radio" name="q6" value="b"> b: O(n)</label><br>
+        <label><input type="radio" name="q6" value="c"> c: O(n²)</label><br>
+        <label><input type="radio" name="q6" value="d"> d: O(log n)</label>
+        <div id="explanation6" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>7. Which sorting algorithm divides the array into smaller subarrays and sorts them?</p>
+        <label><input type="radio" name="q7" value="a"> a: Bubble Sort</label><br>
+        <label><input type="radio" name="q7" value="b"> b: Quick Sort</label><br>
+        <label><input type="radio" name="q7" value="c"> c: Insertion Sort</label><br>
+        <label><input type="radio" name="q7" value="d"> d: Selection Sort</label>
+        <div id="explanation7" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>8. What is the main disadvantage of Selection Sort?</p>
+        <label><input type="radio" name="q8" value="a"> a: It is not stable</label><br>
+        <label><input type="radio" name="q8" value="b"> b: It requires more memory</label><br>
+        <label><input type="radio" name="q8" value="c"> c: It is too fast</label><br>
+        <label><input type="radio" name="q8" value="d"> d: It is too complex</label>
+        <div id="explanation8" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>9. Which sorting algorithm is typically used for sorting linked lists?</p>
+        <label><input type="radio" name="q9" value="a"> a: Insertion Sort</label><br>
+        <label><input type="radio" name="q9" value="b"> b: Quick Sort</label><br>
+        <label><input type="radio" name="q9" value="c"> c: Merge Sort</label><br>
+        <label><input type="radio" name="q9" value="d"> d: Selection Sort</label>
+        <div id="explanation9" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>10. What is the primary mechanism of the Heap Sort algorithm?</p>
+        <label><input type="radio" name="q10" value="a"> a: Using a binary search tree</label><br>
+        <label><input type="radio" name="q10" value="b"> b: Using a heap data structure</label><br>
+        <label><input type="radio" name="q10" value="c"> c: Recursive division</label><br>
+        <label><input type="radio" name="q10" value="d"> d: Using insertion</label>
+        <div id="explanation10" class="explanation"></div>
+    </div>
+
+    <button type="button" class="submit-button" onclick="submitQuiz()">Submit</button>
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>

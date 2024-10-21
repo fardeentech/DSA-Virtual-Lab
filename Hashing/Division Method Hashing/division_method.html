@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Division Method of Hashing</title>
+    <link rel="stylesheet" href="division_method.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Division Method of Hashing</h1>
+
+        <label for="arrayInput">Enter Array Elements (comma-separated):</label>
+        <input type="text" id="arrayInput" placeholder="e.g., 25, 36, 49, 58">
+        
+        <button id="hashButton">Hash the Array</button>
+
+        <div class="animation">
+            <div class="step" id="step1">Input Array</div>
+            <div class="step" id="step2">Finding Next Prime</div>
+            <div class="step" id="step3">Inserting Keys</div>
+            <div class="step" id="step4">Final Hash Table</div>
+        </div>
+
+        <div class="result">
+            <div id="nextPrime"></div>
+            <div id="hashTable"></div>
+        </div>
+    </div>
+
+    <script src="division_method.js"></script>
+</body>
+</html>
