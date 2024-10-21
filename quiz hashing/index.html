@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Quiz</h1>
+<form id="quizForm">
+    <div class="question">
+        <p>1. Which of the following is NOT a common collision resolution technique?</p>
+        <label><input type="radio" name="q1" value="a"> a: Separate Chaining</label><br>
+        <label><input type="radio" name="q1" value="b"> b: Linear Probing</label><br>
+        <label><input type="radio" name="q1" value="c"> c: Quadratic Probing</label><br>
+        <label><input type="radio" name="q1" value="d"> d: Binary Search</label>
+        <div id="explanation1" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>2. In linear probing, how are collisions resolved?</p>
+        <label><input type="radio" name="q2" value="a"> a: By searching the next available slot in a circular manner</label><br>
+        <label><input type="radio" name="q2" value="b"> b: By storing the collided elements in a linked list</label><br>
+        <label><input type="radio" name="q2" value="c"> c: By hashing the collided element again</label><br>
+        <label><input type="radio" name="q2" value="d"> d: By using a binary tree structure</label>
+        <div id="explanation2" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>3. Which collision resolution technique uses linked lists to store multiple elements at the same index?</p>
+        <label><input type="radio" name="q3" value="a"> a: Linear Probing</label><br>
+        <label><input type="radio" name="q3" value="b"> b: Separate Chaining</label><br>
+        <label><input type="radio" name="q3" value="c"> c: Quadratic Probing</label><br>
+        <label><input type="radio" name="q3" value="d"> d: Double Hashing</label>
+        <div id="explanation3" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>4. Which of the following is true about quadratic probing?</p>
+        <label><input type="radio" name="q4" value="a"> a: It resolves collisions by increasing index sequentially</label><br>
+        <label><input type="radio" name="q4" value="b"> b: It resolves collisions by probing at intervals of squares (i.e., 1, 4, 9, etc.)</label><br>
+        <label><input type="radio" name="q4" value="c"> c: It uses a second hash function to resolve collisions</label><br>
+        <label><input type="radio" name="q4" value="d"> d: It is slower than linear probing</label>
+        <div id="explanation4" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>5. Double hashing uses which of the following methods to resolve collisions?</p>
+        <label><input type="radio" name="q5" value="a"> a: Probing the next slot linearly</label><br>
+        <label><input type="radio" name="q5" value="b"> b: Using a secondary hash function</label><br>
+        <label><input type="radio" name="q5" value="c"> c: Adding a constant to the original hash value</label><br>
+        <label><input type="radio" name="q5" value="d"> d: Rearranging the keys in the table</label>
+        <div id="explanation5" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>6. What is the key problem associated with linear probing in collision resolution?</p>
+        <label><input type="radio" name="q6" value="a"> a: Higher memory usage</label><br>
+        <label><input type="radio" name="q6" value="b"> b: Hash table gets corrupted easily</label><br>
+        <label><input type="radio" name="q6" value="c"> c: Primary clustering</label><br>
+        <label><input type="radio" name="q6" value="d"> d: Secondary clustering</label>
+        <div id="explanation6" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>7. Which collision resolution technique is most likely to lead to secondary clustering?</p>
+        <label><input type="radio" name="q7" value="a"> a: Separate Chaining</label><br>
+        <label><input type="radio" name="q7" value="b"> b: Linear Probing</label><br>
+        <label><input type="radio" name="q7" value="c"> c: Quadratic Probing</label><br>
+        <label><input type="radio" name="q7" value="d"> d: Double Hashing</label>
+        <div id="explanation7" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>8. Which of the following methods provides the best distribution of keys to avoid collisions in a hash table?</p>
+        <label><input type="radio" name="q8" value="a"> a: Linear Probing</label><br>
+        <label><input type="radio" name="q8" value="b"> b: Quadratic Probing</label><br>
+        <label><input type="radio" name="q8" value="c"> c: Double Hashing</label><br>
+        <label><input type="radio" name="q8" value="d"> d: Separate Chaining</label>
+        <div id="explanation8" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>9. What happens when a hash table using separate chaining becomes full?</p>
+        <label><input type="radio" name="q9" value="a"> a: The table automatically resizes</label><br>
+        <label><input type="radio" name="q9" value="b"> b: Collisions can no longer be resolved</label><br>
+        <label><input type="radio" name="q9" value="c"> c: Keys are hashed again with a different function</label><br>
+        <label><input type="radio" name="q9" value="d"> d: The data is lost</label>
+        <div id="explanation9" class="explanation"></div>
+    </div>
+
+    <button type="button" class="submit-button" onclick="submitQuiz()">Submit</button>
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
