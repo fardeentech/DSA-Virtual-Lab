@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Operations with Size Limit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .input-section {
+            margin-bottom: 20px;
+        }
+
+        input[type="number"] {
+            padding: 5px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin-right: 5px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .stack-container {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: flex-start;
+            align-items: center;
+            border: 2px solid #333;
+            width: 150px;
+            height: 300px;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: white;
+        }
+
+        .stack-element {
+            width: 100px;
+            height: 40px;
+            margin: 5px 0;
+            background-color: #007bff;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .output-message {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Stack Operations</h1>
+        <div class="input-section">
+            <input type="number" id="stackSize" placeholder="Enter stack size" />
+            <input type="number" id="stackInput" placeholder="Enter a number" />
+            <button onclick="setStackSize()">Set Size</button>
+            <button onclick="push()">Push</button>
+            <button onclick="pop()">Pop</button>
+            <button onclick="peek()">Peek</button>
+        </div>
+        <div id="stackContainer" class="stack-container">
+            <!-- Stack elements will appear here -->
+        </div>
+        <div id="messageOutput" class="output-message"></div>
+    </div>
+
+    <script>
+        let stack = [];
+        let maxSize = 0;
+
+        function setStackSize() {
+            const sizeInput = document.getElementById('stackSize').value;
+            if (sizeInput === '' || sizeInput <= 0) {
+                alert("Please enter a valid stack size.");
+                return;
+            }
+            maxSize = parseInt(sizeInput);
+            document.getElementById('messageOutput').innerText = `Stack size set to ${maxSize}.`;
+            stack = [];  // Reset stack when size is set
+            renderStack();
+        }
+
+        function push() {
+            const input = document.getElementById('stackInput').value;
+            if (maxSize === 0) {
+                alert("Please set the stack size first.");
+                return;
+            }
+            if (input === '') {
+                alert("Please enter a number to push.");
+                return;
+            }
+            if (stack.length >= maxSize) {
+                document.getElementById('messageOutput').innerText = "Stack Overflow! Cannot push more elements.";
+                return;
+            }
+            stack.push(input);
+            renderStack();
+            document.getElementById('stackInput').value = '';
+        }
+
+        function pop() {
+            if (stack.length === 0) {
+                document.getElementById('messageOutput').innerText = "Stack Underflow! No elements to pop.";
+                return;
+            }
+            stack.pop();
+            renderStack();
+        }
+
+        function peek() {
+            if (stack.length === 0) {
+                document.getElementById('messageOutput').innerText = "Stack is empty. Nothing to peek.";
+            } else {
+                const topElement = stack[stack.length - 1];
+                document.getElementById('messageOutput').innerText = `Top element is: ${topElement}`;
+            }
+        }
+
+        function renderStack() {
+            const stackContainer = document.getElementById('stackContainer');
+            stackContainer.innerHTML = '';
+
+            stack.forEach(element => {
+                const div = document.createElement('div');
+                div.classList.add('stack-element');
+                div.innerText = element;
+                stackContainer.appendChild(div);
+            });
+
+            // Clear the overflow/underflow message
+            document.getElementById('messageOutput').innerText = '';
+        }
+    </script>
+</body>
+</html>
