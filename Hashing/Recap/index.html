@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OSI Model</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="website icon" type="png" href="/osi_1.png" />
+  </head>
+
+  <body>
+    <header class="header-outer">
+      <div
+        class="header-inner responsive-wrapper"
+        style="font-weight: 700; font-size: larger; align-items: center"
+      >
+        <div class="header-logo" style="display: flex">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRgE9REvT2dY1cnszT4YNrQb4OOFBua_JF_w&s"
+            style="width: 100px; height: 100px; margin-right: 20px"
+          />
+          <br />
+          <h3>Virtual Lab</h3>
+        </div>
+        <nav class="header-navigation">
+          <a href="/index_new.html">Home</a>
+          <a href="/index.html">Algorithms</a>
+          <a href="/developer.html">About Us</a>
+          <a href="/Feedback Form/index.html">Feedback Form</a>
+          <button>Menu</button>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main-content responsive-wrapper" style="display: flex">
+        <section
+          class="section-one"
+          style="flex: 0.15; padding: 20px; border-right: 1px solid #ccc"
+        >
+          <nav class="header-navigation" style="color: aliceblue">
+            <a href="/DSA-Virtual-Lab/Hashing/Aim/index.html" style="display: block; margin-right: 50px">Aim</a>
+            <a href="/DSA-Virtual-Lab/Hashing/Overview/index.html" style="display: block; margin-right: 50px">Overview</a>
+            <a href="/DSA-Virtual-Lab/Hashing/Recap/index.html" style="display: block; margin-right: 50px">Recap</a>
+            <a href="/DSA-Virtual-Lab/Hashing/Pretest Hashing/index.html" style="display: block; margin-right: 50px">Pretest</a>
+            <a href="/DSA-Virtual-Lab/Hashing/Division Method Hashing/division_method.html" style="display: block; margin-right: 50px">Insertion Sort</a>
+            <a href="/DSA-Virtual-Lab/Hashing/Analysis/index.html" style="display: block; margin-right: 50px">Analysis</a>
+            <a href="/DSA-Virtual-Lab/Hashing/Posttest Hashing/index.html" style="display: block">Posttest</a>
+          </nav>
+        </section>
+
+        <article class="widget section-two" style="flex: 0.7; padding: 20px">
+          <h1>Recap of Hashing</h1>
+      
+          <h2>Overview</h2>
+          <p>Hashing is a technique used for fast data retrieval by using a hash function to map data items to unique positions in a hash table. It is widely used in various applications where constant time complexity is desired for search, insertion, and deletion operations.</p>
+      
+          <h2>Key Characteristics</h2>
+          <ul>
+              <li><strong>Type:</strong> Data retrieval technique using a hash table</li>
+              <li><strong>Time Complexity:</strong>
+                  <ul>
+                      <li>Best Case: O(1) (for search, insert, delete)</li>
+                      <li>Average Case: O(1) (with good hash function and minimal collisions)</li>
+                      <li>Worst Case: O(n) (if all elements collide and are stored in a single bucket)</li>
+                  </ul>
+              </li>
+              <li><strong>Space Complexity:</strong> O(n) (space required to store the hash table)</li>
+              <li><strong>Efficient:</strong> Ideal for large datasets and fast lookup operations.</li>
+              <li><strong>Handling Collisions:</strong> Various techniques such as chaining or open addressing can be used to resolve hash collisions.</li>
+          </ul>
+      
+          <h2>How It Works</h2>
+          <p>A hash function takes the input data (key) and converts it into a hash code (an integer). This hash code is then mapped to a location (index) in the hash table. If multiple keys map to the same index (collision), a collision resolution method is used to handle it.</p>
+      
+          <h2>Steps of Hashing</h2>
+          <ol>
+              <li>Choose a hash function that distributes the keys uniformly across the hash table.</li>
+              <li>Use the hash function to compute the hash code of the key.</li>
+              <li>Store the data at the index corresponding to the hash code in the hash table.</li>
+              <li>In case of a collision, apply a collision resolution technique such as chaining or open addressing.</li>
+              <li>To search for an element, compute the hash code and check the corresponding index.</li>
+          </ol>
+      
+          <h2>Example</h2>
+          <p>Given keys: <strong>[23, 44, 12, 57, 89]</strong></p>
+          <p>Assume a simple hash function is <strong>key % 10</strong>. After hashing, the keys will be stored at the following indices in the hash table: <strong>[12, 23, 44, 57, 89]</strong> (assuming no collisions).</p>
+      
+          <h2>Use Cases</h2>
+          <p>Hashing is commonly used in:</p>
+          <ul>
+              <li>Implementing hash-based data structures like hash maps and hash sets</li>
+              <li>Databases for fast key-based data retrieval</li>
+              <li>Caching systems to store frequently accessed data</li>
+              <li>Password storage with cryptographic hash functions</li>
+          </ul>
+          
+      </article>
+      
+      </div>
+    </main>
+    <script src="sorting.js"></script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OSI Model</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="website icon" type="png" href="/osi_1.png" />
+  </head>
+
+  <body>
+    <header class="header-outer">
+      <div
+        class="header-inner responsive-wrapper"
+        style="font-weight: 700; font-size: larger; align-items: center"
+      >
+        <div class="header-logo" style="display: flex">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRgE9REvT2dY1cnszT4YNrQb4OOFBua_JF_w&s"
+            style="width: 100px; height: 100px; margin-right: 20px"
+          />
+          <br />
+          <h3>Virtual Lab</h3>
+        </div>
+        <nav class="header-navigation">
+          <a href="/index_new.html">Home</a>
+          <a href="/index.html">Algorithms</a>
+          <a href="/developer.html">About Us</a>
+          <a href="/Feedback Form/index.html">Feedback Form</a>
+          <button>Menu</button>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main-content responsive-wrapper" style="display: flex">
+        <section
+          class="section-one"
+          style="flex: 0.15; padding: 20px; border-right: 1px solid #ccc"
+        >
+        <nav class="header-navigation" style="color: aliceblue">
+          <a href="/DSA-Virtual-Lab/Linked List/Aim/index.html style="display: block; margin-right: 50px">Aim</a>
+          <a href="/DSA-Virtual-Lab/Linked List/Overview/index.html" style="display: block; margin-right: 50px">Overview</a>
+          <a href="/DSA-Virtual-Lab/Linked List/Recap/index.html" style="display: block; margin-right: 50px">Recap</a>
+          <a href="/DSA-Virtual-Lab/Linked List/Pretest Linked List/index.html" style="display: block; margin-right: 50px">Pretest</a>
+          <a href="/DSA-Virtual-Lab/Linked List/Demonstration/index.html" style="display: block; margin-right: 50px">Insertion Sort</a>
+          <a href="/DSA-Virtual-Lab/Linked List/Analysis/index.html" style="display: block; margin-right: 50px">Analysis</a>
+          <a href="/DSA-Virtual-Lab/Linked List/Posttest/index.html" style="display: block">Posttest</a>
+        </nav>
+        </section>
+
+        <article class="widget section-two" style="flex: 0.7; padding: 20px">
+          <h1>Recap of Linked Lists</h1>
+
+          <h2>Overview</h2>
+          <p>A Linked List is a linear data structure that consists of a sequence of elements, where each element (or node) contains a value and a reference (or pointer) to the next node in the sequence. Linked Lists are dynamic in size, allowing for efficient insertions and deletions compared to arrays.</p>
+          
+          <h2>Key Characteristics</h2>
+          <ul>
+              <li><strong>Type:</strong> Linear data structure</li>
+              <li><strong>Time Complexity:</strong>
+                  <ul>
+                      <li>Access: O(n) (to traverse to a particular element)</li>
+                      <li>Search: O(n) (in the worst case, need to traverse the entire list)</li>
+                      <li>Insertion: O(1) (at the head or tail), O(n) (at a given position)</li>
+                      <li>Deletion: O(1) (if node is known), O(n) (if node needs to be searched)</li>
+                  </ul>
+              </li>
+              <li><strong>Space Complexity:</strong> O(n) (for storing n elements)</li>
+              <li><strong>Dynamic Size:</strong> Yes, can grow or shrink as needed.</li>
+              <li><strong>Non-contiguous:</strong> Nodes may not be stored in contiguous memory locations.</li>
+          </ul>
+          
+          <h2>How It Works</h2>
+          <p>In a linked list, each node contains data and a reference to the next node. The first node is called the head, and the last node points to null (or None), indicating the end of the list. This structure allows for efficient memory usage and dynamic size adjustments.</p>
+          
+          <h2>Types of Linked Lists</h2>
+          <ul>
+              <li><strong>Singly Linked List:</strong> Each node points to the next node, allowing for one-way traversal.</li>
+              <li><strong>Doubly Linked List:</strong> Each node has references to both the next and previous nodes, allowing for bidirectional traversal.</li>
+              <li><strong>Circular Linked List:</strong> The last node points back to the first node, forming a circular structure.</li>
+          </ul>
+          
+          <h2>Example</h2>
+          <p>Given the linked list: <strong>1 → 2 → 3 → 4 → 5</strong></p>
+          <p>After inserting a node with value 6 at the end, the list will be: <strong>1 → 2 → 3 → 4 → 5 → 6</strong></p>
+          
+          <h2>Use Cases</h2>
+          <p>Linked Lists are particularly useful for:</p>
+          <ul>
+              <li>Dynamic memory allocation where size is unpredictable</li>
+              <li>Implementing data structures like stacks and queues</li>
+              <li>When frequent insertions and deletions are needed</li>
+              <li>Maintaining ordered collections of items</li>
+          </ul>
+          
+        </article>
+      </div>
+    </main>
+    <script src="sorting.js"></script>
+  </body>
+</html>

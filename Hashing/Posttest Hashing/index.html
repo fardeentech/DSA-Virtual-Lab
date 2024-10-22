@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashing Post-Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Post-Test</h1>
+<form id="quizForm">
+    <div class="question">
+        <p>1. What is the primary purpose of a hash function in data structures?</p>
+        <label><input type="radio" name="q1" value="a"> a: To sort data efficiently</label><br>
+        <label><input type="radio" name="q1" value="b"> b: To create a unique identifier for data</label><br>
+        <label><input type="radio" name="q1" value="c"> c: To encrypt data for security</label><br>
+        <label><input type="radio" name="q1" value="d"> d: To compress data for storage</label>
+        <div id="explanation1" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>2. Which of the following is a characteristic of a cryptographic hash function?</p>
+        <label><input type="radio" name="q2" value="a"> a: It must be reversible</label><br>
+        <label><input type="radio" name="q2" value="b"> b: It produces a fixed-size output</label><br>
+        <label><input type="radio" name="q2" value="c"> c: It is not sensitive to input changes</label><br>
+        <label><input type="radio" name="q2" value="d"> d: It can easily find two different inputs that produce the same hash value</label>
+        <div id="explanation2" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>3. In the context of hash tables, what does "load factor" refer to?</p>
+        <label><input type="radio" name="q3" value="a"> a: The ratio of the number of filled slots to the total number of slots</label><br>
+        <label><input type="radio" name="q3" value="b"> b: The amount of data stored in the hash table</label><br>
+        <label><input type="radio" name="q3" value="c"> c: The average time complexity of operations</label><br>
+        <label><input type="radio" name="q3" value="d"> d: The total number of collisions that occur</label>
+        <div id="explanation3" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>4. Which of the following statements is true about hash functions used in data storage?</p>
+        <label><input type="radio" name="q4" value="a"> a: They should maximize the number of collisions.</label><br>
+        <label><input type="radio" name="q4" value="b"> b: They should be easy to compute but difficult to invert.</label><br>
+        <label><input type="radio" name="q4" value="c"> c: They should use variable-length inputs and outputs.</label><br>
+        <label><input type="radio" name="q4" value="d"> d: They should always produce the same output for any input.</label>
+        <div id="explanation4" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>5. Which of the following is a common application of hash functions?</p>
+        <label><input type="radio" name="q5" value="a"> a: Data encryption</label><br>
+        <label><input type="radio" name="q5" value="b"> b: Digital signatures</label><br>
+        <label><input type="radio" name="q5" value="c"> c: Sorting algorithms</label><br>
+        <label><input type="radio" name="q5" value="d"> d: File compression</label>
+        <div id="explanation5" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>6. What does it mean for a hash function to be "deterministic"?</p>
+        <label><input type="radio" name="q6" value="a"> a: It produces a different output for each input.</label><br>
+        <label><input type="radio" name="q6" value="b"> b: It produces the same output for the same input every time.</label><br>
+        <label><input type="radio" name="q6" value="c"> c: It can handle varying input sizes.</label><br>
+        <label><input type="radio" name="q6" value="d"> d: It is fast to compute.</label>
+        <div id="explanation6" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>7. Which property of hash functions is essential for ensuring data integrity?</p>
+        <label><input type="radio" name="q7" value="a"> a: Irreversibility</label><br>
+        <label><input type="radio" name="q7" value="b"> b: Uniform distribution</label><br>
+        <label><input type="radio" name="q7" value="c"> c: Sensitivity to input changes</label><br>
+        <label><input type="radio" name="q7" value="d"> d: Fixed-size output</label>
+        <div id="explanation7" class="explanation"></div>
+    </div>
+
+    <button type="button" class="submit-button" onclick="submitQuiz()">Submit</button>
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Sorting Visualization</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f8ff; /* Soothing light blue background */
+        margin: 0;
+      }
+
+      .input-container {
+        margin-bottom: 20px;
+      }
+
+      input {
+        padding: 10px;
+        border: 1px solid #4682b4;
+        border-radius: 5px;
+        width: 300px;
+        margin-right: 10px;
+      }
+
+      button {
+        padding: 10px 15px;
+        border: none;
+        background-color: #4682b4;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #5a9bd4;
+      }
+
+      .array-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .array-element {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background-color: #4682b4;
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 18px;
+        transition: background-color 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="input-container">
+      <input
+        type="text"
+        id="array-input"
+        placeholder="Enter numbers separated by commas"
+      />
+      <button onclick="startSorting()">Sort Array</button>
+    </div>
+    <div class="array-container" id="array-container"></div>
+    <script>
+      const arrayContainer = document.getElementById("array-container");
+
+      // Function to create visual representation of the array
+      function visualizeArray(array) {
+        arrayContainer.innerHTML = ""; // Clear previous visualization
+
+        array.forEach((value) => {
+          const element = document.createElement("div");
+          element.classList.add("array-element");
+          element.textContent = value;
+          arrayContainer.appendChild(element);
+        });
+      }<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Division Method of Hashing</title>
+    <link rel="stylesheet" href="division_method.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Division Method of Hashing</h1>
+
+        <label for="arrayInput">Enter Array Elements (comma-separated):</label>
+        <input type="text" id="arrayInput" placeholder="e.g., 25, 36, 49, 58">
+        
+        <button id="hashButton">Hash the Array</button>
+
+        <div class="animation">
+            <div class="step" id="step1">Input Array</div>
+            <div class="step" id="step2">Finding Next Prime</div>
+            <div class="step" id="step3">Inserting Keys</div>
+            <div class="step" id="step4">Final Hash Table</div>
+        </div>
+
+        <div class="result">
+            <div id="nextPrime"></div>
+            <div id="hashTable"></div>
+        </div>
+    </div>
+
+    <script src="division_method.js"></script>
+</body>
+</html>
+
+      // Function to start the sorting process
+      function startSorting() {
+        const input = document.getElementById("array-input").value;
+        const array = input.split(",").map(Number);
+
+        // Validate input
+        if (array.some(isNaN)) {
+          alert("Please enter a valid array of numbers separated by commas.");
+          return;
+        }
+
+        visualizeArray(array);
+        bubbleSort(array);
+      }
+
+      // Bubble Sort visualization
+      async function bubbleSort(array) {
+        const elements = document.getElementsByClassName("array-element");
+
+        for (let i = 0; i < array.length; i++) {
+          for (let j = 0; j < array.length - i - 1; j++) {
+            // Highlight elements being compared
+            elements[j].style.backgroundColor = "#ffa500"; // Orange
+            elements[j + 1].style.backgroundColor = "#ffa500"; // Orange
+
+            await new Promise((r) => setTimeout(r, 300)); // Pause for visualization
+
+            if (array[j] > array[j + 1]) {
+              // Swap elements in array
+              [array[j], array[j + 1]] = [array[j + 1], array[j]];
+
+              // Swap elements in DOM
+              visualizeArray(array);
+
+              // Get new elements references after re-rendering
+              await new Promise((r) => setTimeout(r, 300)); // Pause for visualization
+            }
+
+            // Reset color after comparison
+            elements[j].style.backgroundColor = "#4682b4"; // Steel blue
+            elements[j + 1].style.backgroundColor = "#4682b4"; // Steel blue
+          }
+        }
+
+        // Final visualization update
+        visualizeArray(array);
+      }
+    </script>
+  </body>
+</html>

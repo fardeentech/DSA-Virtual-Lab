@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post-Test Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .correct {
+            color: green;
+        }
+        .wrong {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Post-Test Quiz</h2>
+
+<form id="quiz-form">
+    <div class="question">
+        <p>1. Which of the following operations has a time complexity of O(log n) in a balanced Binary Search Tree?</p>
+        <input type="radio" id="q1a" name="q1" value="Insertion">
+        <label for="q1a">Insertion</label><br>
+        <input type="radio" id="q1b" name="q1" value="Traversal">
+        <label for="q1b">Traversal</label><br>
+        <input type="radio" id="q1c" name="q1" value="Deletion">
+        <label for="q1c">Deletion</label>
+    </div>
+
+    <div class="question">
+        <p>2. What is the worst-case time complexity of searching in an unbalanced Binary Search Tree?</p>
+        <input type="radio" id="q2a" name="q2" value="O(log n)">
+        <label for="q2a">O(log n)</label><br>
+        <input type="radio" id="q2b" name="q2" value="O(n)">
+        <label for="q2b">O(n)</label><br>
+        <input type="radio" id="q2c" name="q2" value="O(n log n)">
+        <label for="q2c">O(n log n)</label>
+    </div>
+
+    <div class="question">
+        <p>3. What is the primary advantage of using a Binary Search Tree?</p>
+        <input type="radio" id="q3a" name="q3" value="Faster searching and sorting">
+        <label for="q3a">Faster searching and sorting</label><br>
+        <input type="radio" id="q3b" name="q3" value="Faster memory allocation">
+        <label for="q3b">Faster memory allocation</label><br>
+        <input type="radio" id="q3c" name="q3" value="Less storage space">
+        <label for="q3c">Less storage space</label>
+    </div>
+
+    <!-- New Question 4 -->
+    <div class="question">
+        <p>4. Which traversal method ensures visiting nodes in ascending order in a Binary Search Tree?</p>
+        <input type="radio" id="q4a" name="q4" value="Preorder">
+        <label for="q4a">Preorder</label><br>
+        <input type="radio" id="q4b" name="q4" value="Inorder">
+        <label for="q4b">Inorder</label><br>
+        <input type="radio" id="q4c" name="q4" value="Postorder">
+        <label for="q4c">Postorder</label>
+    </div>
+
+    <!-- New Question 5 -->
+    <div class="question">
+        <p>5. In a Binary Search Tree, the right child of a node contains a value that is:</p>
+        <input type="radio" id="q5a" name="q5" value="Greater than the node">
+        <label for="q5a">Greater than the node</label><br>
+        <input type="radio" id="q5b" name="q5" value="Smaller than the node">
+        <label for="q5b">Smaller than the node</label><br>
+        <input type="radio" id="q5c" name="q5" value="Equal to the node">
+        <label for="q5c">Equal to the node</label>
+    </div>
+
+    <button type="button" onclick="submitQuiz()">Submit</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+    function submitQuiz() {
+        var resultDiv = document.getElementById('result');
+        var score = 0;
+        var feedback = "";
+
+        // Question 1 validation
+        if (document.querySelector('input[name="q1"]:checked').value === "Insertion") {
+            score++;
+            feedback += "<p class='correct'>Q1 is correct</p>";
+        } else {
+            feedback += "<p class='wrong'>Q1 is wrong</p>";
+        }
+
+        // Question 2 validation
+        if (document.querySelector('input[name="q2"]:checked').value === "O(n)") {
+            score++;
+            feedback += "<p class='correct'>Q2 is correct</p>";
+        } else {
+            feedback += "<p class='wrong'>Q2 is wrong</p>";
+        }
+
+        // Question 3 validation
+        if (document.querySelector('input[name="q3"]:checked').value === "Faster searching and sorting") {
+            score++;
+            feedback += "<p class='correct'>Q3 is correct</p>";
+        } else {
+            feedback += "<p class='wrong'>Q3 is wrong</p>";
+        }
+
+        // Question 4 validation
+        if (document.querySelector('input[name="q4"]:checked').value === "Inorder") {
+            score++;
+            feedback += "<p class='correct'>Q4 is correct</p>";
+        } else {
+            feedback += "<p class='wrong'>Q4 is wrong</p>";
+        }
+
+        // Question 5 validation
+        if (document.querySelector('input[name="q5"]:checked').value === "Greater than the node") {
+            score++;
+            feedback += "<p class='correct'>Q5 is correct</p>";
+        } else {
+            feedback += "<p class='wrong'>Q5 is wrong</p>";
+        }
+
+        resultDiv.innerHTML = "Your score: " + score + "/5<br>" + feedback;
+    }
+</script>
+
+</body>
+</html>

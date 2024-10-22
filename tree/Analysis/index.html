@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OSI Model</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="website icon" type="png" href="/osi_1.png" />
+  </head>
+
+  <body>
+    <header class="header-outer">
+      <div
+        class="header-inner responsive-wrapper"
+        style="font-weight: 700; font-size: larger; align-items: center"
+      >
+        <div class="header-logo" style="display: flex">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRgE9REvT2dY1cnszT4YNrQb4OOFBua_JF_w&s"
+            style="width: 100px; height: 100px; margin-right: 20px"
+          />
+          <br />
+          <h3>Virtual Lab</h3>
+        </div>
+        <nav class="header-navigation">
+          <a href="/index_new.html">Home</a>
+          <a href="/index.html">Algorithms</a>
+          <a href="/developer.html">About Us</a>
+          <a href="/Feedback Form/index.html">Feedback Form</a>
+          <button>Menu</button>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main-content responsive-wrapper" style="display: flex">
+        <section
+          class="section-one"
+          style="flex: 0.15; padding: 20px; border-right: 1px solid #ccc"
+        >
+          <nav class="header-navigation" style="color: aliceblue">
+            <a href="/DSA-Virtual-Lab/tree/Aim/index.html" style="display: block; margin-right: 50px">Aim</a>
+            <a href="/DSA-Virtual-Lab/tree/Overview/index.html" style="display: block; margin-right: 50px">Overview</a>
+            <a href="/DSA-Virtual-Lab/tree/Recap/index.html" style="display: block; margin-right: 50px">Recap</a>
+            <a href="/DSA-Virtual-Lab/tree/Pretest/index.html" style="display: block; margin-right: 50px">Pretest</a>
+            <a href="/DSA-Virtual-Lab/tree/Demonstration/index.html" style="display: block; margin-right: 50px">Insertion Sort</a>
+            <a href="/DSA-Virtual-Lab/tree/Analysis/index.html" style="display: block; margin-right: 50px">Analysis</a>
+            <a href="/DSA-Virtual-Lab/tree/Postest/PostTestBST.html" style="display: block">Posttest</a>
+          </nav>
+        </section>
+
+        <article class="widget section-two" style="flex: 0.7; padding: 20px">
+          <section>
+            <!-- Running Time Section -->
+            <section class="section">
+              <h1>Running Time of Tree Operations</h1>
+              <p>
+                Tree operations such as insertion, deletion, and search depend on the height of the tree. In a balanced binary search tree (BST), these operations are efficient, with time complexity proportional to the height of the tree. 
+              </p>
+              <p>
+                For a binary search tree with <strong>N</strong> elements, the time complexity for insertion, deletion, and search in the best and average cases is <strong>O(log N)</strong> (when the tree is balanced). However, in the worst case (when the tree becomes skewed), the time complexity degrades to <strong>O(N)</strong>.
+              </p>
+            </section>
+          
+            <!-- Best and Worst Cases Section -->
+            <section class="section">
+              <h1>Best and Worst Cases for Tree Operations</h1>
+              <ul>
+                <li><strong>Best Case:</strong> The binary tree is perfectly balanced, meaning the height of the tree is log(N). In this case, search, insertion, and deletion can all be performed in <strong>O(log N)</strong> time.</li>
+                <li><strong>Worst Case:</strong> The binary tree is completely unbalanced, resembling a linked list. In this case, each operation must traverse the entire tree, resulting in a time complexity of <strong>O(N)</strong>.</li>
+              </ul>
+            </section>
+          
+            <!-- Space Complexity Section -->
+            <section class="section">
+              <h1>Space Complexity of Tree Operations</h1>
+              <p>
+                The space complexity of tree operations is primarily determined by the space required to store the nodes of the tree. For a binary search tree, the space complexity is <strong>O(N)</strong>, where <strong>N</strong> is the number of nodes in the tree.
+              </p>
+              <p>
+                Additional space may be required for recursion stacks during tree traversal (inorder, preorder, postorder). In a balanced tree, the recursion stack depth is proportional to the height of the tree, which is <strong>O(log N)</strong>. In the worst case of an unbalanced tree, the recursion depth may become <strong>O(N)</strong>.
+              </p>
+            </section>
+          
+            <!-- Stability of Tree Operations Section -->
+            <section class="section">
+              <h1>Stability of Tree Operations</h1>
+              <p>
+                Binary search trees (BSTs) do not inherently maintain stability in the same way that sorting algorithms like Insertion Sort do. Stability refers to preserving the relative order of elements with equal keys, but in a binary search tree, the order of insertion and the structure of the tree determine the relative order.
+              </p>
+              <p>
+                However, for specific use cases where stability is required, balanced trees such as AVL trees or red-black trees can be used in combination with additional bookkeeping techniques to ensure stable insertions and maintain the order of equal elements.
+              </p>
+            </section>
+          </section>
+          
+        </article>
+      </div>
+    </main>
+    <script src="sorting.js"></script>
+  </body>
+</html>

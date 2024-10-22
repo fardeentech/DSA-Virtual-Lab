@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Sort Post-Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Insertion Sort Post-Test</h1>
+<form id="quizForm">
+    <div class="question">
+        <p>1. What is the average time complexity of Insertion Sort?</p>
+        <label><input type="radio" name="q1" value="a"> a: O(n log n)</label><br>
+        <label><input type="radio" name="q1" value="b"> b: O(n²)</label><br>
+        <label><input type="radio" name="q1" value="c"> c: O(n)</label><br>
+        <label><input type="radio" name="q1" value="d"> d: O(log n)</label>
+        <div id="explanation1" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>2. In which scenario does Insertion Sort perform the best?</p>
+        <label><input type="radio" name="q2" value="a"> a: When the array is already sorted</label><br>
+        <label><input type="radio" name="q2" value="b"> b: When the array is reverse sorted</label><br>
+        <label><input type="radio" name="q2" value="c"> c: When the array has many duplicates</label><br>
+        <label><input type="radio" name="q2" value="d"> b: When the array is random</label>
+        <div id="explanation2" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>3. What is the main advantage of Insertion Sort compared to other sorting algorithms?</p>
+        <label><input type="radio" name="q3" value="a"> a: It is faster for small data sets</label><br>
+        <label><input type="radio" name="q3" value="b"> b: It can handle large datasets efficiently</label><br>
+        <label><input type="radio" name="q3" value="c"> c: It requires less memory</label><br>
+        <label><input type="radio" name="q3" value="d"> d: It is the only stable sort</label>
+        <div id="explanation3" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>4. How does Insertion Sort maintain the order of equal elements?</p>
+        <label><input type="radio" name="q4" value="a"> a: By using additional data structures</label><br>
+        <label><input type="radio" name="q4" value="b"> b: By comparing elements</label><br>
+        <label><input type="radio" name="q4" value="c"> c: It is inherently stable</label><br>
+        <label><input type="radio" name="q4" value="d"> d: It does not maintain the order</label>
+        <div id="explanation4" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>5. Which of the following best describes how Insertion Sort works?</p>
+        <label><input type="radio" name="q5" value="a"> a: It divides the array into smaller parts</label><br>
+        <label><input type="radio" name="q5" value="b"> b: It sorts the array in place by building a sorted section</label><br>
+        <label><input type="radio" name="q5" value="c"> c: It uses a heap structure to sort</label><br>
+        <label><input type="radio" name="q5" value="d"> d: It sorts the array by repeatedly swapping</label>
+        <div id="explanation5" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>6. What is the worst-case time complexity of Insertion Sort?</p>
+        <label><input type="radio" name="q6" value="a"> a: O(n log n)</label><br>
+        <label><input type="radio" name="q6" value="b"> b: O(n)</label><br>
+        <label><input type="radio" name="q6" value="c"> c: O(n²)</label><br>
+        <label><input type="radio" name="q6" value="d"> d: O(log n)</label>
+        <div id="explanation6" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>7. Which type of data structure does Insertion Sort primarily operate on?</p>
+        <label><input type="radio" name="q7" value="a"> a: Linked lists</label><br>
+        <label><input type="radio" name="q7" value="b"> b: Arrays</label><br>
+        <label><input type="radio" name="q7" value="c"> c: Trees</label><br>
+        <label><input type="radio" name="q7" value="d"> d: Graphs</label>
+        <div id="explanation7" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>8. What is the space complexity of Insertion Sort?</p>
+        <label><input type="radio" name="q8" value="a"> a: O(n)</label><br>
+        <label><input type="radio" name="q8" value="b"> b: O(log n)</label><br>
+        <label><input type="radio" name="q8" value="c"> c: O(1)</label><br>
+        <label><input type="radio" name="q8" value="d"> d: O(n²)</label>
+        <div id="explanation8" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>9. Why is Insertion Sort considered a stable sorting algorithm?</p>
+        <label><input type="radio" name="q9" value="a"> a: It maintains the relative order of equal elements</label><br>
+        <label><input type="radio" name="q9" value="b"> b: It sorts in descending order</label><br>
+        <label><input type="radio" name="q9" value="c"> c: It requires less memory</label><br>
+        <label><input type="radio" name="q9" value="d"> d: It is faster than other algorithms</label>
+        <div id="explanation9" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>10. Which of the following statements is true about Insertion Sort?</p>
+        <label><input type="radio" name="q10" value="a"> a: It is the fastest sorting algorithm for all cases</label><br>
+        <label><input type="radio" name="q10" value="b"> b: It is inefficient for small datasets</label><br>
+        <label><input type="radio" name="q10" value="c"> c: It is adaptive and efficient for nearly sorted data</label><br>
+        <label><input type="radio" name="q10" value="d"> d: It cannot be implemented in a linked list</label>
+        <div id="explanation10" class="explanation"></div>
+    </div>
+
+    <button type="button" class="submit-button" onclick="submitQuiz()">Submit</button>
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>

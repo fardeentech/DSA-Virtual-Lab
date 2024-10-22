@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OSI Model</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="website icon" type="png" href="/osi_1.png" />
+  </head>
+
+  <body>
+    <header class="header-outer">
+      <div
+        class="header-inner responsive-wrapper"
+        style="font-weight: 700; font-size: larger; align-items: center"
+      >
+        <div class="header-logo" style="display: flex">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRgE9REvT2dY1cnszT4YNrQb4OOFBua_JF_w&s"
+            style="width: 100px; height: 100px; margin-right: 20px"
+          />
+          <br />
+          <h3>Virtual Lab</h3>
+        </div>
+        <nav class="header-navigation">
+          <a href="/index_new.html">Home</a>
+          <a href="/index.html">Algorithms</a>
+          <a href="/developer.html">About Us</a>
+          <a href="/Feedback Form/index.html">Feedback Form</a>
+          <button>Menu</button>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main-content responsive-wrapper" style="display: flex">
+        <section
+          class="section-one"
+          style="flex: 0.15; padding: 20px; border-right: 1px solid #ccc"
+        >
+          <nav class="header-navigation" style="color: aliceblue">
+            <a href="/DSA-Virtual-Lab/Hashing/Aim/index.html" style="display: block; margin-right: 50px">Aim</a>
+            <a href="/DSA-Virtual-Lab/Hashing/Overview/index.html" style="display: block; margin-right: 50px">Overview</a>
+            <a href="/DSA-Virtual-Lab/Hashing/Recap/index.html" style="display: block; margin-right: 50px">Recap</a>
+            <a href="/DSA-Virtual-Lab/Hashing/Pretest Hashing/index.html" style="display: block; margin-right: 50px">Pretest</a>
+            <a href="/DSA-Virtual-Lab/Hashing/Division Method Hashing/division_method.html" style="display: block; margin-right: 50px">Insertion Sort</a>
+            <a href="/DSA-Virtual-Lab/Hashing/Analysis/index.html" style="display: block; margin-right: 50px">Analysis</a>
+            <a href="/DSA-Virtual-Lab/Hashing/Posttest Hashing/index.html" style="display: block">Posttest</a>
+          </nav>
+        </section>
+
+        <article class="widget section-two" style="flex: 0.7; padding: 20px">
+          <section>
+            <section class="section">
+              <h1>Running Time of Hashing</h1>
+              <p>
+                Hashing is an efficient way to map data (keys) to specific locations (hash codes) in a hash table. The efficiency of this operation depends on how well the hash function distributes keys and how collisions are handled.
+              </p>
+              <p>
+                The time complexity of inserting, deleting, or searching for an element in a hash table is <strong>O(1)</strong> on average, meaning the operation can be performed in constant time. However, in the worst-case scenario, where multiple collisions occur and all keys are mapped to the same bucket, the time complexity can degrade to <strong>O(N)</strong>, where <strong>N</strong> is the number of elements.
+              </p>
+              
+              <!-- Best and Worst Cases Section -->
+              <section class="section">
+                <h1>Best and Worst Cases for Hashing</h1>
+                <ul>
+                  <li><strong>Best Case:</strong> The hash function distributes keys evenly across the hash table, minimizing collisions. In this case, each element is placed directly into its unique bucket, resulting in constant-time operations. The best-case time complexity is <strong>O(1)</strong>.</li>
+                  <li><strong>Worst Case:</strong> All keys hash to the same index in the hash table, causing a large number of collisions. If collisions are resolved using chaining, the worst-case time complexity for search, insert, and delete operations is <strong>O(N)</strong>, where <strong>N</strong> is the total number of elements.</li>
+                </ul>
+              </section>
+              
+              <!-- Space Complexity Section -->
+              <section class="section">
+                <h1>Space Complexity of Hashing</h1>
+                <p>
+                  The space complexity of a hash table depends on the number of elements and the size of the hash table itself. In general, if <strong>N</strong> elements are stored, and the table has <strong>M</strong> slots, the space complexity is <strong>O(N + M)</strong>. Typically, hash tables are designed with enough space (M) to minimize collisions, which helps achieve constant-time performance.
+                </p>
+              </section>
+              
+              <section class="section">
+                <h1>Handling Collisions in Hashing</h1>
+                <p>
+                  Hashing often faces the issue of <strong>collisions</strong>, which occur when two different keys hash to the same index. There are various techniques to handle collisions:
+                </p>
+                <ul>
+                  <li><strong>Chaining:</strong> Multiple elements are stored in a list at the same index. When a collision occurs, the new element is added to the list at the corresponding bucket.</li>
+                  <li><strong>Open Addressing:</strong> When a collision occurs, the algorithm searches for the next available index based on a probing sequence (linear probing, quadratic probing, or double hashing).</li>
+                </ul>
+                <p>
+                  Both methods aim to maintain efficient data retrieval, although chaining is often more robust in practice when collisions are frequent.
+                </p>
+              </section>
+              
+              <section class="section">
+                <h1>Stability in Hashing</h1>
+                <p>
+                  Unlike some sorting algorithms, <strong>Hashing is not inherently stable</strong>. Stability is typically not a concern in hashing because the primary goal is efficient data retrieval, and hashing does not involve ordering of elements in the same way as sorting algorithms do.
+                </p>
+                <p>
+                  However, stability can be implemented in certain hashing schemes by storing additional information about the original order of elements within the hash table, but this increases complexity.
+                </p>
+              </section>
+              
+              
+              
+          </section>
+        </article>
+      </div>
+    </main>
+    <script src="sorting.js"></script>
+  </body>
+</html>
