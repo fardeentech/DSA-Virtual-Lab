@@ -1,0 +1,33 @@
+body{
+            font-family: Arial, sans-serif;
+            margin: 20px;
+    }
+        
+.question{
+            margin-bottom: 20px;
+    }
+        .correct-box, .incorrect-box {
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            color: white;
+        }
+        .correct-box {
+            background-color: #4CAF50; 
+        }
+        .incorrect-box {
+            background-color: #f44336; 
+        }
+        .explanation {
+            font-size: 14px;
+            color: white;
+        }
+        .submit-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }

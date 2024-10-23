@@ -23,10 +23,10 @@
           <h3>Virtual Lab</h3>
         </div>
         <nav class="header-navigation">
-          <a href="/index_new.html">Home</a>
-          <a href="/index.html">Algorithms</a>
-          <a href="/developer.html">About Us</a>
-          <a href="/Feedback Form/index.html">Feedback Form</a>
+          <a href="/DSA-Virtual-Lab/index_new.html">Home</a>
+          <a href="/DSA-Virtual-Lab/index.html">Algorithms</a>
+          <a href="/DSA-Virtual-Lab/developer.html">About Us</a>
+          <a href="/DSA-Virtual-Lab/Feedback Form/index.html">Feedback Form</a>
           <button>Menu</button>
         </nav>
       </div>
@@ -37,63 +37,63 @@
           class="section-one"
           style="flex: 0.15; padding: 20px; border-right: 1px solid #ccc"
         >
-          <nav class="header-navigation" style="color: aliceblue">
-            <a href="/sorting/Aim/index.html" style="display: block; margin-right: 50px">Aim</a>
-            <a href="/sorting/Overview/index.html" style="display: block; margin-right: 50px">Overview</a>
-            <a href="/sorting/Recap/index.html" style="display: block; margin-right: 50px">Recap</a>
-            <a href="/sorting/Pretest Sorting/index.html" style="display: block; margin-right: 50px">Pretest</a>
-            <a href="/sorting/Demonstration/index.html" style="display: block; margin-right: 50px">Insertion Sort</a>
-            <a href="/sorting/Analysis/index.html" style="display: block; margin-right: 50px">Analysis</a>
-            <a href="/sorting/Posttest/index.html" style="display: block">Posttest</a>
-          </nav>
+        <nav class="header-navigation" style="color: aliceblue">
+          <a href="/DSA-Virtual-Lab/stack/Aim/index.html" style="display: block; margin-right: 50px">Aim</a>
+        <a href="/DSA-Virtual-Lab/stack/Overview/index.html" style="display: block; margin-right: 50px">Overview</a>
+        <a href="/DSA-Virtual-Lab/stack/Recap/index.html" style="display: block; margin-right: 50px">Recap</a>
+        <a href="/DSA-Virtual-Lab/stack/Pretest/index.html" style="display: block; margin-right: 50px">Pretest</a>
+        <a href="/DSA-Virtual-Lab/stack/Demonstration/index.html" style="display: block; margin-right: 50px">Stack</a>
+        <a href="/DSA-Virtual-Lab/stack/Analysis/index.html" style="display: block; margin-right: 50px">Analysis</a>
+        <a href="/DSA-Virtual-Lab/stack/Posttest/index.html" style="display: block">Posttest</a>
+        </nav>
         </section>
 
         <article class="widget section-two" style="flex: 0.7; padding: 20px">
-            <h1>Recap of Insertion Sort</h1>
+          <h1>Recap of Stack</h1>
 
-            <h2>Overview</h2>
-            <p>Insertion Sort is a simple sorting algorithm that builds a sorted array (or list) one element at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort.</p>
-    
-            <h2>Key Characteristics</h2>
-            <ul>
-                <li><strong>Type:</strong> Comparison-based sorting algorithm</li>
-                <li><strong>Time Complexity:</strong>
-                    <ul>
-                        <li>Best Case: O(n) (when the array is already sorted)</li>
-                        <li>Average Case: O(n²)</li>
-                        <li>Worst Case: O(n²)</li>
-                    </ul>
-                </li>
-                <li><strong>Space Complexity:</strong> O(1) (in-place sorting)</li>
-                <li><strong>Stable:</strong> Yes, maintains the relative order of equal elements.</li>
-                <li><strong>Adaptable:</strong> Efficient for small data sets and partially sorted arrays.</li>
-            </ul>
-    
-            <h2>How It Works</h2>
-            <p>The algorithm divides the input list into two parts: a sorted part and an unsorted part. Initially, the sorted part contains only the first element. The algorithm iterates through the unsorted part, picking each element and placing it in the correct position within the sorted part.</p>
-    
-            <h2>Steps of Insertion Sort</h2>
-            <ol>
-                <li>Start with the second element (index 1) as the current element.</li>
-                <li>Compare the current element with the elements in the sorted part (to its left).</li>
-                <li>Shift all elements that are greater than the current element one position to the right.</li>
-                <li>Insert the current element at its correct position.</li>
-                <li>Repeat until the entire list is sorted.</li>
-            </ol>
-    
-            <h2>Example</h2>
-            <p>Given the array: <strong>[5, 2, 9, 1, 5, 6]</strong></p>
-            <p>After applying Insertion Sort, the sorted array will be: <strong>[1, 2, 5, 5, 6, 9]</strong></p>
-    
-            <h2>Use Cases</h2>
-            <p>Insertion Sort is particularly useful for:</p>
-            <ul>
-                <li>Small datasets</li>
-                <li>Partially sorted arrays</li>
-                <li>As a part of more complex algorithms (like Timsort)</li>
-            </ul>
-              
-          </section>
+          <h2>Overview</h2>
+          <p>A Stack is a linear data structure that follows the Last In, First Out (LIFO) principle. This means that the last element added to the stack is the first one to be removed. It is widely used in various applications such as expression evaluation, backtracking, and managing function calls in recursion.</p>
+          
+          <h2>Key Characteristics</h2>
+          <ul>
+              <li><strong>Type:</strong> Linear Data Structure</li>
+              <li><strong>Operations:</strong>
+                  <ul>
+                      <li><strong>Push:</strong> Add an element to the top of the stack</li>
+                      <li><strong>Pop:</strong> Remove the top element from the stack</li>
+                      <li><strong>Peek:</strong> View the top element without removing it</li>
+                      <li><strong>IsEmpty:</strong> Check if the stack is empty</li>
+                  </ul>
+              </li>
+              <li><strong>Time Complexity:</strong> O(1) for push, pop, and peek operations.</li>
+              <li><strong>Space Complexity:</strong> O(n) (where n is the number of elements in the stack)</li>
+              <li><strong>Applications:</strong> Widely used in function call management, undo operations, and more.</li>
+          </ul>
+          
+          <h2>How It Works</h2>
+          <p>The stack has two main operations: push (to add an element to the top) and pop (to remove an element from the top). Elements are added and removed only from the top of the stack, adhering to the LIFO principle.</p>
+          
+          <h2>Steps of Stack Operations</h2>
+          <ol>
+              <li><strong>Push Operation:</strong> Add an element to the top of the stack.</li>
+              <li><strong>Pop Operation:</strong> Remove the element from the top of the stack.</li>
+              <li><strong>Peek Operation:</strong> View the top element without removing it.</li>
+              <li><strong>IsEmpty Operation:</strong> Check if the stack has no elements.</li>
+          </ol>
+          
+          <h2>Example</h2>
+          <p>Given an empty stack, if we perform the following operations: <strong>push(10), push(20), pop(), push(30)</strong>, the stack will look like this:</p>
+          <p><strong>[30, 10]</strong> (from top to bottom).</p>
+          
+          <h2>Use Cases</h2>
+          <p>Stacks are particularly useful for:</p>
+          <ul>
+              <li>Managing function calls in recursion</li>
+              <li>Reversing data (e.g., reversing a string)</li>
+              <li>Backtracking algorithms (e.g., depth-first search)</li>
+              <li>Handling undo operations in software applications</li>
+          </ul>
+          
         </article>
       </div>
     </main>
