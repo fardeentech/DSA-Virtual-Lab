@@ -1,108 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pretest Insertion Sort Quiz</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OSI Model</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="website icon" type="png" href="/osi_1.png" />
+  </head>
 
-<h1>Pretest Insertion Sort Quiz</h1>
-<form id="quizForm">
-    <div class="question">
-        <p>1. What is the average time complexity of Insertion Sort?</p>
-        <label><input type="radio" name="q1" value="a"> a: O(n log n)</label><br>
-        <label><input type="radio" name="q1" value="b"> b: O(n²)</label><br>
-        <label><input type="radio" name="q1" value="c"> c: O(n)</label><br>
-        <label><input type="radio" name="q1" value="d"> d: O(log n)</label>
-        <div id="explanation1" class="explanation"></div>
-    </div>
+  <body>
+    <header class="header-outer">
+      <div
+        class="header-inner responsive-wrapper"
+        style="font-weight: 700; font-size: larger; align-items: center"
+      >
+        <div class="header-logo" style="display: flex">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRgE9REvT2dY1cnszT4YNrQb4OOFBua_JF_w&s"
+            style="width: 100px; height: 100px; margin-right: 20px"
+          />
+          <br />
+          <h3>Virtual Lab</h3>
+        </div>
+        <nav class="header-navigation">
+          <a href="/DSA-Virtual-Lab/index_new.html">Home</a>
+          <a href="/DSA-Virtual-Lab/index.html">Algorithms</a>
+          <a href="/DSA-Virtual-Lab/developer.html">About Us</a>
+          <a href="/DSA-Virtual-Lab/Feedback Form/index.html">Feedback Form</a>
+          <button>Menu</button>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main-content responsive-wrapper" style="display: flex">
+        <section
+          class="section-one"
+          style="flex: 0.15; padding: 20px; border-right: 1px solid #ccc"
+        >
+          <nav class="header-navigation" style="color: aliceblue">
+            <a href="/DSA-Virtual-Lab/sorting/Aim/index.html" style="display: block; margin-right: 50px">Aim</a>
+          <a href="/DSA-Virtual-Lab/sorting/Overview/index.html" style="display: block; margin-right: 50px">Overview</a>
+          <a href="/DSA-Virtual-Lab/sorting/Recap/index.html" style="display: block; margin-right: 50px">Recap</a>
+          <a href="/DSA-Virtual-Lab/sorting/Pretest Sorting/index.html" style="display: block; margin-right: 50px">Pretest</a>
+          <a href="/DSA-Virtual-Lab/sorting/Demonstration/index.html" style="display: block; margin-right: 50px">Insertion Sort</a>
+          <a href="/DSA-Virtual-Lab/sorting/Analysis/index.html" style="display: block; margin-right: 50px">Analysis</a>
+          <a href="/DSA-Virtual-Lab/sorting/Posttest/index.html" style="display: block">Posttest</a>
+          </nav>
+        </section>
 
-    <div class="question">
-        <p>2. In which case does Insertion Sort perform the best?</p>
-        <label><input type="radio" name="q2" value="a"> a: When the array is randomly ordered</label><br>
-        <label><input type="radio" name="q2" value="b"> b: When the array is sorted</label><br>
-        <label><input type="radio" name="q2" value="c"> c: When the array is in reverse order</label><br>
-        <label><input type="radio" name="q2" value="d"> d: When the array has many duplicate elements</label>
-        <div id="explanation2" class="explanation"></div>
-    </div>
+        <article class="widget section-two" style="flex: 0.7; padding: 20px">
+          <section>
+            <h1>Insertion Sort Quiz</h1>
+            <form id="quizForm"></form>
+        
+                                 
+          </section>
+        </article>
+      </div>
+    </main>
+    <!-- <script src="sorting.js"></script> -->
+    <script>
+        // JavaScript code here (insert the provided JavaScript code)
+        
+        // Define all 20 questions in an array
+        const questions = [
+            {
+                question: "What is the average time complexity of Insertion Sort?",
+                options: ["O(n log n)", "O(n²)", "O(n)", "O(log n)"],
+                correctAnswer: "O(n²)",
+                explanation: "The average time complexity of Insertion Sort is O(n²)."
+            },
+            {
+                question: "In which case does Insertion Sort perform the best?",
+                options: ["When the array is randomly ordered", "When the array is sorted", "When the array is in reverse order", "When the array has many duplicate elements"],
+                correctAnswer: "When the array is sorted",
+                explanation: "Insertion Sort performs best when the array is already sorted."
+            },
+            {
+                question: "Is Insertion Sort adaptive?",
+                options: ["No", "Yes", "Only for reverse sorted arrays", "Only for random arrays"],
+                correctAnswer: "Yes",
+                explanation: "Insertion Sort is adaptive and works efficiently on nearly sorted data."
+            },
+            {
+                question: "What is the space complexity of Insertion Sort?",
+                options: ["O(1)", "O(n)", "O(n log n)", "O(n²)"],
+                correctAnswer: "O(1)",
+                explanation: "Insertion Sort is an in-place algorithm with a space complexity of O(1)."
+            },
+            {
+                question: "Is Insertion Sort a stable sorting algorithm?",
+                options: ["Yes", "No", "Depends on the implementation", "Depends on the data"],
+                correctAnswer: "Yes",
+                explanation: "Insertion Sort is stable, meaning it preserves the relative order of equal elements."
+            },
+            {
+                question: "Which type of data structure does Insertion Sort work well on?",
+                options: ["Binary trees", "Linked lists", "Stacks", "Graphs"],
+                correctAnswer: "Linked lists",
+                explanation: "Insertion Sort is efficient when used with linked lists."
+            },
+            {
+                question: "What is the worst-case time complexity of Insertion Sort?",
+                options: ["O(n)", "O(n log n)", "O(n²)", "O(log n)"],
+                correctAnswer: "O(n²)",
+                explanation: "The worst-case time complexity of Insertion Sort occurs when the data is in reverse order, and it is O(n²)."
+            },
+            {
+                question: "Which of the following is a disadvantage of Insertion Sort?",
+                options: ["It uses additional memory", "It has poor average-case performance", "It is difficult to implement", "It is not adaptive"],
+                correctAnswer: "It has poor average-case performance",
+                explanation: "One of the disadvantages of Insertion Sort is its O(n²) average-case performance."
+            },
+            {
+                question: "What is the best-case time complexity of Insertion Sort?",
+                options: ["O(n log n)", "O(log n)", "O(n²)", "O(n)"],
+                correctAnswer: "O(n)",
+                explanation: "The best-case time complexity of Insertion Sort is O(n), which occurs when the data is already sorted."
+            },
+            {
+                question: "Is Insertion Sort an in-place sorting algorithm?",
+                options: ["Yes", "No", "Depends on the data size", "Depends on the implementation"],
+                correctAnswer: "Yes",
+                explanation: "Insertion Sort sorts data in place, requiring no additional memory."
+            },
+            {
+                question: "In which scenario is Insertion Sort most efficient?",
+                options: ["Large datasets", "Nearly sorted datasets", "Randomly ordered datasets", "Reverse ordered datasets"],
+                correctAnswer: "Nearly sorted datasets",
+                explanation: "Insertion Sort is highly efficient for nearly sorted datasets due to its adaptive nature."
+            },
+            {
+                question: "Which sorting algorithm is best compared with Insertion Sort for small datasets?",
+                options: ["Merge Sort", "Quick Sort", "Bubble Sort", "Heap Sort"],
+                correctAnswer: "Bubble Sort",
+                explanation: "Bubble Sort and Insertion Sort are both simple algorithms that are used for small datasets."
+            },
+            {
+                question: "What is a key characteristic of Insertion Sort?",
+                options: ["It is non-adaptive", "It works with linked lists", "It is not stable", "It requires O(n log n) memory"],
+                correctAnswer: "It works with linked lists",
+                explanation: "One key characteristic of Insertion Sort is that it works well with linked lists."
+            },
+            {
+                question: "How does Insertion Sort process elements?",
+                options: ["By splitting and merging", "By comparing and swapping", "By building a sorted array one element at a time", "By comparing against the median"],
+                correctAnswer: "By building a sorted array one element at a time",
+                explanation: "Insertion Sort works by building a sorted array one element at a time, inserting each element in its correct position."
+            },
+            {
+                question: "What is the main advantage of Insertion Sort?",
+                options: ["Its O(n²) performance", "Its simplicity and efficiency for small datasets", "Its high memory usage", "Its ability to parallelize easily"],
+                correctAnswer: "Its simplicity and efficiency for small datasets",
+                explanation: "Insertion Sort's main advantage is its simplicity and efficiency for small datasets."
+            },
+            {
+                question: "Does Insertion Sort use recursion?",
+                options: ["Yes", "No", "Only in certain implementations", "Depends on the data size"],
+                correctAnswer: "No",
+                explanation: "Insertion Sort is an iterative algorithm and does not use recursion."
+            },
+            {
+                question: "Which part of an array is sorted in Insertion Sort after each pass?",
+                options: ["The entire array", "The right half", "The left half", "A growing portion from the start"],
+                correctAnswer: "A growing portion from the start",
+                explanation: "In Insertion Sort, after each pass, the left portion of the array (a growing portion from the start) is sorted."
+            },
+            {
+                question: "Which type of algorithm is Insertion Sort?",
+                options: ["Divide and conquer", "Greedy", "Dynamic programming", "Comparison-based"],
+                correctAnswer: "Comparison-based",
+                explanation: "Insertion Sort is a comparison-based sorting algorithm."
+            },
+            {
+                question: "What happens in each iteration of Insertion Sort?",
+                options: ["The array is split and merged", "The largest element is placed at the correct position", "One element is inserted into its correct position", "The smallest element is placed at the end of the array"],
+                correctAnswer: "One element is inserted into its correct position",
+                explanation: "In each iteration, one element is inserted into its correct position in the sorted portion of the array."
+            },
+            {
+                question: "In which situation is Insertion Sort inefficient?",
+                options: ["Small datasets", "Nearly sorted data", "Large random datasets", "Data with duplicates"],
+                correctAnswer: "Large random datasets",
+                explanation: "Insertion Sort is inefficient for large random datasets due to its O(n²) time complexity."
+            }
+        ];
 
-    <div class="question">
-        <p>3. Which of the following is a characteristic of Insertion Sort?</p>
-        <label><input type="radio" name="q3" value="a"> a: It is not stable</label><br>
-        <label><input type="radio" name="q3" value="b"> b: It is efficient for small data sets</label><br>
-        <label><input type="radio" name="q3" value="c"> c: It requires additional memory</label><br>
-        <label><input type="radio" name="q3" value="d"> d: It can only sort numbers</label>
-        <div id="explanation3" class="explanation"></div>
-    </div>
+        // Function to shuffle array (Fisher-Yates shuffle)
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
 
-    <div class="question">
-        <p>4. What happens to the performance of Insertion Sort with nearly sorted data?</p>
-        <label><input type="radio" name="q4" value="a"> a: It performs poorly</label><br>
-        <label><input type="radio" name="q4" value="b"> b: It performs optimally</label><br>
-        <label><input type="radio" name="q4" value="c"> c: It becomes unstable</label><br>
-        <label><input type="radio" name="q4" value="d"> d: It becomes slower than Selection Sort</label>
-        <div id="explanation4" class="explanation"></div>
-    </div>
+        // Function to display 5 random questions
+        function displayRandomQuestions() {
+            const quizContainer = document.getElementById("quizForm");
+            quizContainer.innerHTML = ""; // Clear previous questions
 
-    <div class="question">
-        <p>5. What is the main disadvantage of Insertion Sort?</p>
-        <label><input type="radio" name="q5" value="a"> a: It is too fast</label><br>
-        <label><input type="radio" name="q5" value="b"> b: It is inefficient for large lists</label><br>
-        <label><input type="radio" name="q5" value="c"> c: It is complex to implement</label><br>
-        <label><input type="radio" name="q5" value="d"> b: It requires extra memory</label>
-        <div id="explanation5" class="explanation"></div>
-    </div>
+            shuffle(questions); // Shuffle the questions array
+            const selectedQuestions = questions.slice(0, 5); // Select the first 5 questions after shuffle
 
-    <div class="question">
-        <p>6. How does Insertion Sort maintain stability?</p>
-        <label><input type="radio" name="q6" value="a"> a: By swapping elements</label><br>
-        <label><input type="radio" name="q6" value="b"> b: By shifting elements without unnecessary swaps</label><br>
-        <label><input type="radio" name="q6" value="c"> b: By using a different algorithm</label><br>
-        <label><input type="radio" name="q6" value="d"> b: By sorting in two passes</label>
-        <div id="explanation6" class="explanation"></div>
-    </div>
+            selectedQuestions.forEach((q, index) => {
+                const questionHTML = `
+                    <div class="question">
+                        <p>${index + 1}. ${q.question}</p>
+                        ${q.options.map((option, i) => `<label><input type="radio" name="q${index + 1}" value="${option}"> ${option}</label><br>`).join('')}
+                        <div id="explanation${index + 1}" class="explanation"></div>
+                    </div>
+                `;
+                quizContainer.innerHTML += questionHTML;
+            });
 
-    <div class="question">
-        <p>7. What is the space complexity of Insertion Sort?</p>
-        <label><input type="radio" name="q7" value="a"> a: O(n)</label><br>
-        <label><input type="radio" name="q7" value="b"> b: O(log n)</label><br>
-        <label><input type="radio" name="q7" value="c"> c: O(1)</label><br>
-        <label><input type="radio" name="q7" value="d"> d: O(n²)</label>
-        <div id="explanation7" class="explanation"></div>
-    </div>
+            quizContainer.innerHTML += `<button type="button" class="submit-button" onclick="submitQuiz()">Submit</button>`;
+        }
 
-    <div class="question">
-        <p>8. Which of the following scenarios is Insertion Sort particularly useful?</p>
-        <label><input type="radio" name="q8" value="a"> a: When sorting large datasets</label><br>
-        <label><input type="radio" name="q8" value="b"> b: When the dataset is nearly sorted</label><br>
-        <label><input type="radio" name="q8" value="c"> b: When sorting data with many unique keys</label><br>
-        <label><input type="radio" name="q8" value="d"> b: When the dataset is completely unsorted</label>
-        <div id="explanation8" class="explanation"></div>
-    </div>
+        // Call the function to display random questions when the page loads
+        window.onload = displayRandomQuestions;
 
-    <div class="question">
-        <p>9. Which sorting algorithm can be more efficient than Insertion Sort for large datasets?</p>
-        <label><input type="radio" name="q9" value="a"> a: Selection Sort</label><br>
-        <label><input type="radio" name="q9" value="b"> b: Merge Sort</label><br>
-        <label><input type="radio" name="q9" value="c"> b: Heap Sort</label><br>
-        <label><input type="radio" name="q9" value="d"> b: Bubble Sort</label>
-        <div id="explanation9" class="explanation"></div>
-    </div>
+        // Function to handle quiz submission
+        function submitQuiz() {
+            const explanations = document.querySelectorAll('.explanation');
+            explanations.forEach(exp => exp.innerHTML = ""); // Clear existing explanations
 
-    <div class="question">
-        <p>10. Which of the following statements is true about Insertion Sort?</p>
-        <label><input type="radio" name="q10" value="a"> a: It is not suitable for linked lists</label><br>
-        <label><input type="radio" name="q10" value="b"> b: It can be implemented using recursion</label><br>
-        <label><input type="radio" name="q10" value="c"> b: It is slower than Merge Sort</label><br>
-        <label><input type="radio" name="q10" value="d"> b: It is not a stable sorting algorithm</label>
-        <div id="explanation10" class="explanation"></div>
-    </div>
+            const selectedQuestions = questions.slice(0, 5); // The same 5 selected questions
+            
+            selectedQuestions.forEach((q, index) => {
+                const selectedOption = document.querySelector(`input[name="q${index + 1}"]:checked`);
+                const explanationElement = document.getElementById(`explanation${index + 1}`);
+                if (selectedOption && selectedOption.value === q.correctAnswer) {
+                    createBox(true, `Correct! ${q.explanation}`, explanationElement);
+                } else {
+                    createBox(false, `Incorrect. The correct answer is: ${q.correctAnswer}. ${q.explanation}`, explanationElement);
+                }
+            });
+        }
 
-    <button type="button" class="submit-button" onclick="submitQuiz()">Submit</button>
-</form>
+        function createBox(isCorrect, message, explanationElement) {
+            const box = document.createElement('div');
+            box.className = `explanation-box ${isCorrect ? 'correct-box' : 'incorrect-box'}`;
+            box.innerText = message;
+            explanationElement.appendChild(box);
+        }
+    </script>
 
-<script src="script.js"></script>
-</body>
+  </body>
 </html>
