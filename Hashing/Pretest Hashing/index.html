@@ -10,6 +10,7 @@
 
 <h1>Pretest</h1>
 <form id="quizForm">
+    <!-- Existing questions 1-10 -->
     <div class="question">
         <p>1. What is the main purpose of hashing?</p>
         <label><input type="radio" name="q1" value="a"> a: Encryption</label><br>
@@ -99,6 +100,98 @@
         <label><input type="radio" name="q10" value="d"> d: Both b and c</label>
         <div id="explanation10" class="explanation"></div>
     </div>
+
+    <!-- Additional questions 11-20 -->
+    <div class="question">
+        <p>11. Which of the following best describes SHA-3?</p>
+        <label><input type="radio" name="q11" value="a"> a: An update to SHA-256</label><br>
+        <label><input type="radio" name="q11" value="b"> b: A hashing standard unrelated to SHA-2</label><br>
+        <label><input type="radio" name="q11" value="c"> c: The latest version of MD5</label><br>
+        <label><input type="radio" name="q11" value="d"> d: Not yet released</label>
+        <div id="explanation11" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>12. Why is MD5 considered insecure?</p>
+        <label><input type="radio" name="q12" value="a"> a: Too slow</label><br>
+        <label><input type="radio" name="q12" value="b"> b: Prone to collisions</label><br>
+        <label><input type="radio" name="q12" value="c"> c: Too complex</label><br>
+        <label><input type="radio" name="q12" value="d"> d: Produces variable-length outputs</label>
+        <div id="explanation12" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>13. Which property of hashing prevents finding two distinct inputs with the same output?</p>
+        <label><input type="radio" name="q13" value="a"> a: Collision resistance</label><br>
+        <label><input type="radio" name="q13" value="b"> b: Pre-image resistance</label><br>
+        <label><input type="radio" name="q13" value="c"> c: Avalanche effect</label><br>
+        <label><input type="radio" name="q13" value="d"> d: Reversibility</label>
+        <div id="explanation13" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>14. What is the avalanche effect in hashing?</p>
+        <label><input type="radio" name="q14" value="a"> a: Hashes are unpredictable</label><br>
+        <label><input type="radio" name="q14" value="b"> b: Small input change causes large output change</label><br>
+        <label><input type="radio" name="q14" value="c"> c: Produces fixed-size output</label><br>
+        <label><input type="radio" name="q14" value="d"> d: Hash function reversibility</label>
+        <div id="explanation14" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>15. In what scenario is hashing most commonly used?</p>
+        <label><input type="radio" name="q15" value="a"> a: Encrypting messages</label><br>
+        <label><input type="radio" name="q15" value="b"> b: Storing passwords</label><br>
+        <label><input type="radio" name="q15" value="c"> c: Sorting data</label><br>
+        <label><input type="radio" name="q15" value="d"> d: Compressing files</label>
+        <div id="explanation15" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>16. Which hashing algorithm produces the shortest output size?</p>
+        <label><input type="radio" name="q16" value="a"> a: SHA-256</label><br>
+        <label><input type="radio" name="q16" value="b"> b: MD5</label><br>
+        <label><input type="radio" name="q16" value="c"> c: SHA-1</label><br>
+        <label><input type="radio" name="q16" value="d"> d: SHA-512</label>
+        <div id="explanation16" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>17. Which of these is a non-cryptographic hash function?</p>
+        <label><input type="radio" name="q17" value="a"> a: SHA-1</label><br>
+        <label><input type="radio" name="q17" value="b"> b: SHA-256</label><br>
+        <label><input type="radio" name="q17" value="c"> c: MD5</label><br>
+        <label><input type="radio" name="q17" value="d"> d: MurmurHash</label>
+        <div id="explanation17" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>18. Why is it difficult to reverse a good hash function?</p>
+        <label><input type="radio" name="q18" value="a"> a: Fixed-size output</label><br>
+        <label><input type="radio" name="q18" value="b"> b: Many-to-one mapping</label><br>
+        <label><input type="radio" name="q18" value="c"> c: Variable output length</label><br>
+        <label><input type="radio" name="q18" value="d"> d: Complex mathematics</label>
+        <div id="explanation18" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>19. Which algorithm does Bitcoin use for its hashing process?</p>
+        <label><input type="radio" name="q19" value="a"> a: MD5</label><br>
+        <label><input type="radio" name="q19" value="b"> b: SHA-1</label><br>
+        <label><input type="radio" name="q19" value="c"> c: SHA-256</label><br>
+        <label><input type="radio" name="q19" value="d"> d: SHA-512</label>
+        <div id="explanation19" class="explanation"></div>
+    </div>
+
+    <div class="question">
+        <p>20. Which of the following is a characteristic of a cryptographic hash function?</p>
+        <label><input type="radio" name="q20" value="a"> a: Reversible</label><br>
+        <label><input type="radio" name="q20" value="b"> b: Slow to compute</label><br>
+        <label><input type="radio" name="q20" value="c"> c: Pre-image resistant</label><br>
+        <label><input type="radio" name="q20" value="d"> d: Randomized output</label>
+        <div id="explanation20" class="explanation"></div>
+    </div>
+
     <button type="button" class="submit-button" onclick="submitQuiz()">Submit</button>
 </form>
 <script src="script.js"></script>
