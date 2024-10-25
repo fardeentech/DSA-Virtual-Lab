@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OSI Model</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="website icon" type="png" href="/osi_1.png" />
+</head>
+<body>
+    <header class="header-outer">
+        <div class="header-inner responsive-wrapper" style="font-weight: 700; font-size: larger; align-items: center">
+            <div class="header-logo" style="display: flex">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRgE9REvT2dY1cnszT4YNrQb4OOFBua_JF_w&s" style="width: 100px; height: 100px; margin-right: 20px" />
+                <h3>Virtual Lab</h3>
+            </div>
+            <nav class="header-navigation">
+                <a href="/DSA-Virtual-Lab/index_new.html">Home</a>
+                <a href="/DSA-Virtual-Lab/index.html">Algorithms</a>
+                <a href="/DSA-Virtual-Lab/developer.html">About Us</a>
+                <a href="/DSA-Virtual-Lab/Feedback Form/index.html">Feedback Form</a>
+                <button>Menu</button>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main-content responsive-wrapper" style="display: flex">
+            <section class="section-one" style="flex: 0.15; padding: 20px; border-right: 1px solid #ccc">
+                <nav class="header-navigation" style="color: aliceblue">
+                    <a href="/DSA-Virtual-Lab/sorting/Aim/index.html" style="display: block; margin-right: 50px">Aim</a>
+                    <a href="/DSA-Virtual-Lab/sorting/Overview/index.html" style="display: block; margin-right: 50px">Overview</a>
+                    <a href="/DSA-Virtual-Lab/sorting/Recap/index.html" style="display: block; margin-right: 50px">Recap</a>
+                    <a href="/DSA-Virtual-Lab/sorting/Pretest Sorting/index.html" style="display: block; margin-right: 50px">Pretest</a>
+                    <a href="/DSA-Virtual-Lab/sorting/Demonstration/index.html" style="display: block; margin-right: 50px">Stack</a>
+                    <a href="/DSA-Virtual-Lab/sorting/Analysis/index.html" style="display: block; margin-right: 50px">Analysis</a>
+                    <a href="/DSA-Virtual-Lab/sorting/Posttest/index.html" style="display: block">Posttest</a>
+                </nav>
+            </section>
+            <article class="widget section-two" style="flex: 0.7; padding: 20px">
+                <section>
+                    <h1>Stack Quiz</h1>
+                    <form id="quizForm"></form>
+                </section>
+            </article>
+        </div>
+    </main>
+    <script>
+        const questions = [ 
+        
+        
+    {
+        "question": "What is the average time complexity of accessing an element in a stack?",
+        "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+        "correctAnswer": "O(1)",
+        "explanation": "In a stack, accessing the top element takes constant time, O(1), as it is a Last-In-First-Out (LIFO) structure."
+    },
+    {
+        "question": "Which of the following operations is NOT a primary operation for a stack?",
+        "options": ["Push", "Pop", "Peek", "Insert"],
+        "correctAnswer": "Insert",
+        "explanation": "The primary operations in a stack are push, pop, and peek; insert is not a stack-specific operation."
+    },
+    {
+        "question": "What is the main feature of a stack data structure?",
+        "options": ["First-In-First-Out (FIFO)", "Last-In-First-Out (LIFO)", "Random Access", "Sorted Order"],
+        "correctAnswer": "Last-In-First-Out (LIFO)",
+        "explanation": "Stacks follow the Last-In-First-Out (LIFO) principle, where the last element added is the first to be removed."
+    },
+    {
+        "question": "Which of these would be the best use case for a stack?",
+        "options": ["Task scheduling", "Reversing a string", "Sorting a list", "Binary search"],
+        "correctAnswer": "Reversing a string",
+        "explanation": "Stacks are commonly used for tasks that require reversing, such as string reversal, due to their LIFO property."
+    },
+    {
+        "question": "What happens if you try to pop an element from an empty stack?",
+        "options": ["Returns null", "Throws an error", "Pushes the last element again", "Returns a default value"],
+        "correctAnswer": "Throws an error",
+        "explanation": "Attempting to pop from an empty stack usually throws an underflow error, indicating the stack is empty."
+    },
+    {
+        "question": "Which data structure is commonly used to implement function call stacks?",
+        "options": ["Array", "Queue", "Linked List", "Hash Table"],
+        "correctAnswer": "Linked List",
+        "explanation": "A stack for function calls is often implemented with a linked list, allowing efficient push and pop operations."
+    },
+    {
+        "question": "In a stack, where are elements added and removed?",
+        "options": ["Top", "Bottom", "Middle", "Random position"],
+        "correctAnswer": "Top",
+        "explanation": "In a stack, elements are both added and removed from the top of the stack."
+    },
+    {
+        "question": "What is the worst-case time complexity of popping an element from a stack?",
+        "options": ["O(1)", "O(n)", "O(log n)", "O(n log n)"],
+        "correctAnswer": "O(1)",
+        "explanation": "Popping the top element from a stack takes constant time, O(1), regardless of the stack size."
+    },
+    {
+        "question": "What does the 'push' operation do in a stack?",
+        "options": ["Removes the top element", "Adds an element at the top", "Returns the top element", "Adds an element at the bottom"],
+        "correctAnswer": "Adds an element at the top",
+        "explanation": "The 'push' operation adds a new element to the top of the stack."
+    },
+    {
+        "question": "What is a stack overflow?",
+        "options": ["Exceeding the stack's memory limit", "Removing an element from an empty stack", "Adding an element to the top", "Finding an element in the stack"],
+        "correctAnswer": "Exceeding the stack's memory limit",
+        "explanation": "Stack overflow occurs when there is an attempt to push more elements than the stack’s memory can hold."
+    },
+    {
+        "question": "Which operation would you use to view the top element of the stack without removing it?",
+        "options": ["Push", "Pop", "Peek", "Insert"],
+        "correctAnswer": "Peek",
+        "explanation": "The 'peek' operation retrieves the top element without removing it from the stack."
+    },
+    {
+        "question": "What is the time complexity of checking if a stack is empty?",
+        "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+        "correctAnswer": "O(1)",
+        "explanation": "Checking if a stack is empty takes constant time, O(1), as it only requires checking if there are no elements."
+    },
+    {
+        "question": "How does a stack differ from a queue?",
+        "options": ["Stacks follow LIFO, queues follow FIFO", "Stacks use FIFO, queues use LIFO", "Both are random-access", "Stacks are unsorted"],
+        "correctAnswer": "Stacks follow LIFO, queues follow FIFO",
+        "explanation": "A stack follows the Last-In-First-Out (LIFO) principle, whereas a queue follows First-In-First-Out (FIFO)."
+    },
+    {
+        "question": "Which application is commonly associated with stack data structures?",
+        "options": ["Balancing parentheses", "Sorting data", "Finding shortest path", "Binary search"],
+        "correctAnswer": "Balancing parentheses",
+        "explanation": "Stacks are commonly used for balancing parentheses, as each opening parenthesis must match with a closing one in LIFO order."
+    },
+    {
+        "question": "What is the result of pushing elements 1, 2, and 3 in this order and then popping one element?",
+        "options": ["2", "3", "1", "4"],
+        "correctAnswer": "3",
+        "explanation": "In a stack, elements are removed in LIFO order, so 3, being the last element pushed, is the first to be popped."
+    }
+
+
+
+
+        ];
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+        function displayRandomQuestions() {
+            const quizContainer = document.getElementById("quizForm");
+            quizContainer.innerHTML = "";
+            shuffle(questions);
+            const selectedQuestions = questions.slice(0, 5);
+            selectedQuestions.forEach((q, index) => {
+                const questionHTML = `
+                    <div class="question">
+                        <p>${index + 1}. ${q.question}</p>
+                        ${q.options.map((option, i) => `<label><input type="radio" name="q${index + 1}" value="${option}"> ${option}</label><br>`).join('')}
+                        <div id="explanation${index + 1}" class="explanation"></div>
+                    </div>
+                `;
+                quizContainer.innerHTML += questionHTML;
+            });
+            quizContainer.innerHTML += `<button type="button" class="submit-button" onclick="submitQuiz()">Submit</button>`;
+        }
+        window.onload = displayRandomQuestions;
+        function submitQuiz() {
+            const explanations = document.querySelectorAll('.explanation');
+            explanations.forEach(exp => exp.innerHTML = "");
+            const selectedQuestions = questions.slice(0, 5);
+            selectedQuestions.forEach((q, index) => {
+                const selectedOption = document.querySelector(`input[name="q${index + 1}"]:checked`);
+                const explanationElement = document.getElementById(`explanation${index + 1}`);
+                if (selectedOption && selectedOption.value === q.correctAnswer) {
+                    createBox(true, `Correct! ${q.explanation}`, explanationElement);
+                } else {
+                    createBox(false, `Incorrect. The correct answer is: ${q.correctAnswer}. ${q.explanation}`, explanationElement);
+                }
+            });
+        }
+        function createBox(isCorrect, message, explanationElement) {
+            const box = document.createElement('div');
+            box.className = `explanation-box ${isCorrect ? 'correct-box' : 'incorrect-box'}`;
+            box.innerText = message;
+            explanationElement.appendChild(box);
+        }
+    </script>
+</body>
+</html>

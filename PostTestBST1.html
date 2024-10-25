@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OSI Model</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="website icon" type="png" href="/osi_1.png" />
+</head>
+<body>
+    <header class="header-outer">
+        <div class="header-inner responsive-wrapper" style="font-weight: 700; font-size: larger; align-items: center">
+            <div class="header-logo" style="display: flex">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRgE9REvT2dY1cnszT4YNrQb4OOFBua_JF_w&s" style="width: 100px; height: 100px; margin-right: 20px" />
+                <h3>Virtual Lab</h3>
+            </div>
+            <nav class="header-navigation">
+                <a href="/DSA-Virtual-Lab/index_new.html">Home</a>
+                <a href="/DSA-Virtual-Lab/index.html">Algorithms</a>
+                <a href="/DSA-Virtual-Lab/developer.html">About Us</a>
+                <a href="/DSA-Virtual-Lab/Feedback Form/index.html">Feedback Form</a>
+                <button>Menu</button>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main-content responsive-wrapper" style="display: flex">
+            <section class="section-one" style="flex: 0.15; padding: 20px; border-right: 1px solid #ccc">
+                <nav class="header-navigation" style="color: aliceblue">
+                    <a href="/DSA-Virtual-Lab/sorting/Aim/index.html" style="display: block; margin-right: 50px">Aim</a>
+                    <a href="/DSA-Virtual-Lab/sorting/Overview/index.html" style="display: block; margin-right: 50px">Overview</a>
+                    <a href="/DSA-Virtual-Lab/sorting/Recap/index.html" style="display: block; margin-right: 50px">Recap</a>
+                    <a href="/DSA-Virtual-Lab/sorting/Pretest Sorting/index.html" style="display: block; margin-right: 50px">Pretest</a>
+                    <a href="/DSA-Virtual-Lab/sorting/Demonstration/index.html" style="display: block; margin-right: 50px">Binary Search Tree</a>
+                    <a href="/DSA-Virtual-Lab/sorting/Analysis/index.html" style="display: block; margin-right: 50px">Analysis</a>
+                    <a href="/DSA-Virtual-Lab/sorting/Posttest/index.html" style="display: block">Posttest</a>
+                </nav>
+            </section>
+            <article class="widget section-two" style="flex: 0.7; padding: 20px">
+                <section>
+                    <h1>Binary Search Tree Quiz</h1>
+                    <form id="quizForm"></form>
+                </section>
+            </article>
+        </div>
+    </main>
+    <script>
+        const questions = [ 
+        
+        
+    {
+        "question": "What is the average time complexity of searching in a Binary Search Tree (BST)?",
+        "options": ["O(n log n)", "O(n²)", "O(log n)", "O(1)"],
+        "correctAnswer": "O(log n)",
+        "explanation": "In a balanced BST, each search step divides the remaining tree in half, resulting in O(log n) time complexity."
+    },
+    {
+        "question": "What is the primary operation performed by a Binary Search Tree?",
+        "options": ["Insertion", "Deletion", "Traversal", "Searching"],
+        "correctAnswer": "Searching",
+        "explanation": "A Binary Search Tree is primarily used for searching elements efficiently."
+    },
+    {
+        "question": "What is the time complexity of inserting an element in a Binary Search Tree in the worst-case scenario?",
+        "options": ["O(n log n)", "O(n²)", "O(n)", "O(log n)"],
+        "correctAnswer": "O(n)",
+        "explanation": "In the worst case (when the BST is skewed), insertion requires traversing all nodes, resulting in O(n) complexity."
+    },
+    {
+        "question": "Which of the following scenarios would NOT favor using a Binary Search Tree?",
+        "options": ["When searching is frequent", "When elements are frequently deleted", "When the dataset is frequently sorted", "When the dataset has duplicates"],
+        "correctAnswer": "When the dataset has duplicates",
+        "explanation": "Binary Search Trees do not handle duplicates well, as they can violate the BST properties."
+    },
+    {
+        "question": "What happens to the number of comparisons made by a Binary Search Tree as the tree becomes unbalanced?",
+        "options": ["It increases exponentially", "It increases linearly", "It decreases", "It remains constant"],
+        "correctAnswer": "It increases linearly",
+        "explanation": "An unbalanced BST can resemble a linked list, leading to a linear number of comparisons, O(n)."
+    },
+    {
+        "question": "What would be the best alternative to a Binary Search Tree for managing large datasets with frequent searches?",
+        "options": ["AVL Tree", "Heap", "Array", "Bubble Sort"],
+        "correctAnswer": "AVL Tree",
+        "explanation": "An AVL Tree maintains balance after every operation, offering a more efficient O(log n) complexity for large datasets with frequent searches."
+    },
+    {
+        "question": "How does a Binary Search Tree compare with a Hash Table in terms of key ordering?",
+        "options": ["BST maintains order", "Hash Table maintains order", "Both maintain order", "Neither maintains order"],
+        "correctAnswer": "BST maintains order",
+        "explanation": "A Binary Search Tree maintains elements in sorted order, while a Hash Table does not."
+    },
+    {
+        "question": "In what environment might you prefer using a Binary Search Tree?",
+        "options": ["When using large unordered datasets", "When requiring fast access with ordered data", "When memory usage is a major concern", "When data stability is irrelevant"],
+        "correctAnswer": "When requiring fast access with ordered data",
+        "explanation": "BSTs are well-suited for environments where fast access to ordered data is required."
+    },
+    {
+        "question": "What is the effect of the 'balanced' characteristic on a Binary Search Tree's performance?",
+        "options": ["Increases memory usage", "Reduces time complexity", "Does not require additional space", "Increases complexity"],
+        "correctAnswer": "Reduces time complexity",
+        "explanation": "Balanced BSTs provide optimal time complexity (O(log n)) for most operations."
+    },
+    {
+        "question": "Which of the following is true about the space complexity of a Binary Search Tree?",
+        "options": ["It is O(n)", "It is O(n log n)", "It is O(1)", "It varies depending on the input"],
+        "correctAnswer": "It is O(n)",
+        "explanation": "BSTs have O(n) space complexity, as each node requires a reference in memory."
+    },
+    {
+        "question": "Why might one choose not to use a Binary Search Tree for data storage?",
+        "options": ["It is difficult to implement", "It is the fastest option", "It performs poorly with unbalanced data", "It is not reliable"],
+        "correctAnswer": "It performs poorly with unbalanced data",
+        "explanation": "Unbalanced BSTs can degrade to O(n) performance, making them inefficient compared to balanced alternatives."
+    },
+    {
+        "question": "What is the worst-case time complexity for searching in a Binary Search Tree that is completely unbalanced?",
+        "options": ["O(log n)", "O(n log n)", "O(n)", "O(1)"],
+        "correctAnswer": "O(n)",
+        "explanation": "In a completely unbalanced BST (such as a skewed tree), searching can take O(n) time."
+    }
+
+
+
+        ];
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+        function displayRandomQuestions() {
+            const quizContainer = document.getElementById("quizForm");
+            quizContainer.innerHTML = "";
+            shuffle(questions);
+            const selectedQuestions = questions.slice(0, 5);
+            selectedQuestions.forEach((q, index) => {
+                const questionHTML = `
+                    <div class="question">
+                        <p>${index + 1}. ${q.question}</p>
+                        ${q.options.map((option, i) => `<label><input type="radio" name="q${index + 1}" value="${option}"> ${option}</label><br>`).join('')}
+                        <div id="explanation${index + 1}" class="explanation"></div>
+                    </div>
+                `;
+                quizContainer.innerHTML += questionHTML;
+            });
+            quizContainer.innerHTML += `<button type="button" class="submit-button" onclick="submitQuiz()">Submit</button>`;
+        }
+        window.onload = displayRandomQuestions;
+        function submitQuiz() {
+            const explanations = document.querySelectorAll('.explanation');
+            explanations.forEach(exp => exp.innerHTML = "");
+            const selectedQuestions = questions.slice(0, 5);
+            selectedQuestions.forEach((q, index) => {
+                const selectedOption = document.querySelector(`input[name="q${index + 1}"]:checked`);
+                const explanationElement = document.getElementById(`explanation${index + 1}`);
+                if (selectedOption && selectedOption.value === q.correctAnswer) {
+                    createBox(true, `Correct! ${q.explanation}`, explanationElement);
+                } else {
+                    createBox(false, `Incorrect. The correct answer is: ${q.correctAnswer}. ${q.explanation}`, explanationElement);
+                }
+            });
+        }
+        function createBox(isCorrect, message, explanationElement) {
+            const box = document.createElement('div');
+            box.className = `explanation-box ${isCorrect ? 'correct-box' : 'incorrect-box'}`;
+            box.innerText = message;
+            explanationElement.appendChild(box);
+        }
+    </script>
+</body>
+</html>
