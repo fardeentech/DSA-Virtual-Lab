@@ -1,81 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hashing Post-Test</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OSI Model</title>
+    <link rel="stylesheet" href="style1.css" />
+    <link rel="website icon" type="png" href="/osi_1.png" />
 </head>
 <body>
+    <header class="header-outer">
+        <div class="header-inner responsive-wrapper" style="font-weight: 700; font-size: larger; align-items: center">
+            <div class="header-logo" style="display: flex">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRgE9REvT2dY1cnszT4YNrQb4OOFBua_JF_w&s" style="width: 100px; height: 100px; margin-right: 20px" />
+                <h3>Virtual Lab</h3>
+            </div>
+            <nav class="header-navigation">
+                <a href="/DSA-Virtual-Lab/index_new.html">Home</a>
+                <a href="/DSA-Virtual-Lab/index.html">Algorithms</a>
+                <a href="/DSA-Virtual-Lab/developer.html">About Us</a>
+                <a href="/DSA-Virtual-Lab/Feedback Form/index.html">Feedback Form</a>
+                <button>Menu</button>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main-content responsive-wrapper" style="display: flex">
+            <section class="section-one" style="flex: 0.15; padding: 20px; border-right: 1px solid #ccc">
+                <nav class="header-navigation" style="color: aliceblue">
+                    <a href="/DSA-Virtual-Lab/Hashing/Aim/index.html" style="display: block; margin-right: 50px">Aim</a>
+                    <a href="/DSA-Virtual-Lab/Hashing/Overview/index.html" style="display: block; margin-right: 50px">Overview</a>
+                    <a href="/DSA-Virtual-Lab/Hashing/Recap/index.html" style="display: block; margin-right: 50px">Recap</a>
+                    <a href="/DSA-Virtual-Lab/Hashing/Pretest Hashing/index.html" style="display: block; margin-right: 50px">Pretest</a>
+                    <a href="/DSA-Virtual-Lab/Hashing/Division Method Hashing/division_method.html" style="display: block; margin-right: 50px">Hashing</a>
+                    <a href="/DSA-Virtual-Lab/Hashing/Analysis/index.html" style="display: block; margin-right: 50px">Analysis</a>
+                    <a href="/DSA-Virtual-Lab/Hashing/Posttest Hashing/index.html" style="display: block">Posttest</a>
+                  </nav>
+            </section>
+            <article class="widget section-two" style="flex: 0.7; padding: 20px">
+                <section>
+                    <h1>Hashing Quiz</h1>
+                    <form id="quizForm"></form>
+                </section>
+            </article>
+        </div>
+    </main>
+    <script>
+        const questions = [ 
+        
+        
+        
+        
+    {
+        "question": "What is the average time complexity of accessing an element in a hash table?",
+        "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+        "correctAnswer": "O(1)",
+        "explanation": "In a hash table, accessing an element takes average constant time, O(1), due to the direct addressing facilitated by hashing."
+    },
+    {
+        "question": "Which of the following operations is NOT a primary operation for a hash table?",
+        "options": ["Insert", "Delete", "Search", "Sort"],
+        "correctAnswer": "Sort",
+        "explanation": "The primary operations in a hash table are insert, delete, and search; sort is not a typical hash table operation."
+    },
+    {
+        "question": "What is a hash collision?",
+        "options": ["When two keys map to the same index", "When an element is not found", "When the table is resized", "When a key is updated"],
+        "correctAnswer": "When two keys map to the same index",
+        "explanation": "A hash collision occurs when two different keys produce the same hash value and map to the same index in the hash table."
+    },
+    {
+        "question": "Which of these is a common method for resolving hash collisions?",
+        "options": ["Binary search", "Linear probing", "Merge sort", "Quick sort"],
+        "correctAnswer": "Linear probing",
+        "explanation": "Linear probing is a common collision resolution method where, upon a collision, the algorithm checks the next available slot linearly."
+    },
+    {
+        "question": "What is the primary advantage of using a hash table over other data structures?",
+        "options": ["Faster sorting", "Efficient searching and insertion", "Less memory usage", "Ordered data"],
+        "correctAnswer": "Efficient searching and insertion",
+        "explanation": "Hash tables provide efficient searching and insertion operations, typically O(1), making them very fast compared to other data structures."
+    },
+    {
+        "question": "What happens when a hash table becomes too full?",
+        "options": ["Performance decreases", "Elements get deleted", "Hash values change", "A new hash function is used"],
+        "correctAnswer": "Performance decreases",
+        "explanation": "When a hash table becomes too full, the likelihood of collisions increases, which can decrease performance."
+    },
+    {
+        "question": "What is double hashing?",
+        "options": ["Using two hash functions to resolve collisions", "Hashing twice to find an index", "Combining hashing with binary search", "Using a tree structure within the hash table"],
+        "correctAnswer": "Using two hash functions to resolve collisions",
+        "explanation": "Double hashing resolves collisions by applying a second hash function to the key, providing an additional level of addressing."
+    },
+    {
+        "question": "Which data structure is typically used to implement a hash table?",
+        "options": ["Array", "Linked List", "Binary Tree", "Queue"],
+        "correctAnswer": "Array",
+        "explanation": "A hash table is typically implemented using an array, where the array index is determined by the hash function."
+    },
+    {
+        "question": "What does the load factor of a hash table represent?",
+        "options": ["The number of elements in the table", "The ratio of elements to the table size", "The capacity of the table", "The speed of hashing"],
+        "correctAnswer": "The ratio of elements to the table size",
+        "explanation": "The load factor represents the ratio of the number of elements in the hash table to the table's capacity, indicating how full the table is."
+    },
+    {
+        "question": "What is the worst-case time complexity of searching for an element in a hash table?",
+        "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+        "correctAnswer": "O(n)",
+        "explanation": "In the worst-case scenario, where all elements hash to the same index (causing maximum collisions), the time complexity can degrade to O(n)."
+    },
+    {
+        "question": "What is rehashing?",
+        "options": ["Creating a new hash function", "Resizing the hash table and reassigning elements", "Removing duplicate keys", "Increasing the load factor"],
+        "correctAnswer": "Resizing the hash table and reassigning elements",
+        "explanation": "Rehashing involves resizing the hash table and reassigning all existing elements to new indices based on a new hash function."
+    },
+    {
+        "question": "Which type of hash function is likely to distribute keys evenly?",
+        "options": ["Modulo-based", "Multiplicative hashing", "Division-based", "Perfect hashing"],
+        "correctAnswer": "Multiplicative hashing",
+        "explanation": "Multiplicative hashing tends to distribute keys more evenly across the table, reducing the likelihood of collisions."
+    },
+    {
+        "question": "What is an example of a poor hash function characteristic?",
+        "options": ["Even distribution", "Uniform hashing", "Frequent collisions", "Simple computation"],
+        "correctAnswer": "Frequent collisions",
+        "explanation": "A hash function that causes frequent collisions is considered poor because it decreases the efficiency of the hash table."
+    },
+    {
+        "question": "What is the purpose of a hash function?",
+        "options": ["To sort elements", "To map keys to indices in a hash table", "To encrypt data", "To compress data"],
+        "correctAnswer": "To map keys to indices in a hash table",
+        "explanation": "A hash function maps keys to specific indices in a hash table, facilitating efficient access, insertion, and deletion of elements."
+    },
+    {
+        "question": "What is separate chaining?",
+        "options": ["Using multiple arrays for collisions", "Storing collided elements in a linked list at each index", "Combining hashing with sorting", "Applying two hash functions"],
+        "correctAnswer": "Storing collided elements in a linked list at each index",
+        "explanation": "Separate chaining resolves collisions by storing all elements that hash to the same index in a linked list at that index."
+    }
 
-<h1>Post-Test</h1>
-<form id="quizForm">
-    <div class="question">
-        <p>1. What is the primary purpose of a hash function in data structures?</p>
-        <label><input type="radio" name="q1" value="a"> a: To sort data efficiently</label><br>
-        <label><input type="radio" name="q1" value="b"> b: To create a unique identifier for data</label><br>
-        <label><input type="radio" name="q1" value="c"> c: To encrypt data for security</label><br>
-        <label><input type="radio" name="q1" value="d"> d: To compress data for storage</label>
-        <div id="explanation1" class="explanation"></div>
-    </div>
 
-    <div class="question">
-        <p>2. Which of the following is a characteristic of a cryptographic hash function?</p>
-        <label><input type="radio" name="q2" value="a"> a: It must be reversible</label><br>
-        <label><input type="radio" name="q2" value="b"> b: It produces a fixed-size output</label><br>
-        <label><input type="radio" name="q2" value="c"> c: It is not sensitive to input changes</label><br>
-        <label><input type="radio" name="q2" value="d"> d: It can easily find two different inputs that produce the same hash value</label>
-        <div id="explanation2" class="explanation"></div>
-    </div>
 
-    <div class="question">
-        <p>3. In the context of hash tables, what does "load factor" refer to?</p>
-        <label><input type="radio" name="q3" value="a"> a: The ratio of the number of filled slots to the total number of slots</label><br>
-        <label><input type="radio" name="q3" value="b"> b: The amount of data stored in the hash table</label><br>
-        <label><input type="radio" name="q3" value="c"> c: The average time complexity of operations</label><br>
-        <label><input type="radio" name="q3" value="d"> d: The total number of collisions that occur</label>
-        <div id="explanation3" class="explanation"></div>
-    </div>
 
-    <div class="question">
-        <p>4. Which of the following statements is true about hash functions used in data storage?</p>
-        <label><input type="radio" name="q4" value="a"> a: They should maximize the number of collisions.</label><br>
-        <label><input type="radio" name="q4" value="b"> b: They should be easy to compute but difficult to invert.</label><br>
-        <label><input type="radio" name="q4" value="c"> c: They should use variable-length inputs and outputs.</label><br>
-        <label><input type="radio" name="q4" value="d"> d: They should always produce the same output for any input.</label>
-        <div id="explanation4" class="explanation"></div>
-    </div>
 
-    <div class="question">
-        <p>5. Which of the following is a common application of hash functions?</p>
-        <label><input type="radio" name="q5" value="a"> a: Data encryption</label><br>
-        <label><input type="radio" name="q5" value="b"> b: Digital signatures</label><br>
-        <label><input type="radio" name="q5" value="c"> c: Sorting algorithms</label><br>
-        <label><input type="radio" name="q5" value="d"> d: File compression</label>
-        <div id="explanation5" class="explanation"></div>
-    </div>
-
-    <div class="question">
-        <p>6. What does it mean for a hash function to be "deterministic"?</p>
-        <label><input type="radio" name="q6" value="a"> a: It produces a different output for each input.</label><br>
-        <label><input type="radio" name="q6" value="b"> b: It produces the same output for the same input every time.</label><br>
-        <label><input type="radio" name="q6" value="c"> c: It can handle varying input sizes.</label><br>
-        <label><input type="radio" name="q6" value="d"> d: It is fast to compute.</label>
-        <div id="explanation6" class="explanation"></div>
-    </div>
-
-    <div class="question">
-        <p>7. Which property of hash functions is essential for ensuring data integrity?</p>
-        <label><input type="radio" name="q7" value="a"> a: Irreversibility</label><br>
-        <label><input type="radio" name="q7" value="b"> b: Uniform distribution</label><br>
-        <label><input type="radio" name="q7" value="c"> c: Sensitivity to input changes</label><br>
-        <label><input type="radio" name="q7" value="d"> d: Fixed-size output</label>
-        <div id="explanation7" class="explanation"></div>
-    </div>
-
-    <button type="button" class="submit-button" onclick="submitQuiz()">Submit</button>
-</form>
-
-<script src="script.js"></script>
+        ];
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+        function displayRandomQuestions() {
+            const quizContainer = document.getElementById("quizForm");
+            quizContainer.innerHTML = "";
+            shuffle(questions);
+            const selectedQuestions = questions.slice(0, 5);
+            selectedQuestions.forEach((q, index) => {
+                const questionHTML = `
+                    <div class="question">
+                        <p>${index + 1}. ${q.question}</p>
+                        ${q.options.map((option, i) => `<label><input type="radio" name="q${index + 1}" value="${option}"> ${option}</label><br>`).join('')}
+                        <div id="explanation${index + 1}" class="explanation"></div>
+                    </div>
+                `;
+                quizContainer.innerHTML += questionHTML;
+            });
+            quizContainer.innerHTML += `<button type="button" class="submit-button" onclick="submitQuiz()">Submit</button>`;
+        }
+        window.onload = displayRandomQuestions;
+        function submitQuiz() {
+            const explanations = document.querySelectorAll('.explanation');
+            explanations.forEach(exp => exp.innerHTML = "");
+            const selectedQuestions = questions.slice(0, 5);
+            selectedQuestions.forEach((q, index) => {
+                const selectedOption = document.querySelector(`input[name="q${index + 1}"]:checked`);
+                const explanationElement = document.getElementById(`explanation${index + 1}`);
+                if (selectedOption && selectedOption.value === q.correctAnswer) {
+                    createBox(true, `Correct! ${q.explanation}`, explanationElement);
+                } else {
+                    createBox(false, `Incorrect. The correct answer is: ${q.correctAnswer}. ${q.explanation}`, explanationElement);
+                }
+            });
+        }
+        function createBox(isCorrect, message, explanationElement) {
+            const box = document.createElement('div');
+            box.className = `explanation-box ${isCorrect ? 'correct-box' : 'incorrect-box'}`;
+            box.innerText = message;
+            explanationElement.appendChild(box);
+        }
+    </script>
 </body>
 </html>
