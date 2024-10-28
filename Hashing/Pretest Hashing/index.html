@@ -1,199 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pretest</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OSI Model</title>
+    <link rel="stylesheet" href="style1.css" />
+    <link rel="website icon" type="png" href="/osi_1.png" />
 </head>
 <body>
+    <header class="header-outer">
+        <div class="header-inner responsive-wrapper" style="font-weight: 700; font-size: larger; align-items: center">
+            <div class="header-logo" style="display: flex">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRgE9REvT2dY1cnszT4YNrQb4OOFBua_JF_w&s" style="width: 100px; height: 100px; margin-right: 20px" />
+                <h3>Virtual Lab</h3>
+            </div>
+            <nav class="header-navigation">
+                <a href="/DSA-Virtual-Lab/index_new.html">Home</a>
+                <a href="/DSA-Virtual-Lab/index.html">Algorithms</a>
+                <a href="/DSA-Virtual-Lab/developer.html">About Us</a>
+                <a href="/DSA-Virtual-Lab/Feedback Form/index.html">Feedback Form</a>
+                <button>Menu</button>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main-content responsive-wrapper" style="display: flex">
+            <section class="section-one" style="flex: 0.15; padding: 20px; border-right: 1px solid #ccc">
+                <nav class="header-navigation" style="color: aliceblue">
+                    <a href="/DSA-Virtual-Lab/Hashing/Aim/index.html" style="display: block; margin-right: 50px">Aim</a>
+                    <a href="/DSA-Virtual-Lab/Hashing/Overview/index.html" style="display: block; margin-right: 50px">Overview</a>
+                    <a href="/DSA-Virtual-Lab/Hashing/Recap/index.html" style="display: block; margin-right: 50px">Recap</a>
+                    <a href="/DSA-Virtual-Lab/Hashing/Pretest Hashing/index.html" style="display: block; margin-right: 50px">Pretest</a>
+                    <a href="/DSA-Virtual-Lab/Hashing/Division Method Hashing/division_method.html" style="display: block; margin-right: 50px">Hashing</a>
+                    <a href="/DSA-Virtual-Lab/Hashing/Analysis/index.html" style="display: block; margin-right: 50px">Analysis</a>
+                    <a href="/DSA-Virtual-Lab/Hashing/Posttest Hashing/index.html" style="display: block">Posttest</a>
+                  </nav>
+            </section>
+            <article class="widget section-two" style="flex: 0.7; padding: 20px">
+                <section>
+                    <h1>Pretest</h1>
+                    <form id="quizForm"></form>
+                </section>
+            </article>
+        </div>
+    </main>
+    <script>
+        const questions = [ 
+        
+        
+        
+    {
+        "question": "What is hashing?",
+        "options": ["A technique to sort elements", "A technique to search elements", "A technique to store and retrieve data efficiently", "A technique to compress data"],
+        "correctAnswer": "A technique to store and retrieve data efficiently",
+        "explanation": "Hashing is a technique used for fast data retrieval by mapping keys to unique indices in a table."
+    },
+    {
+        "question": "What is a hash function?",
+        "options": ["A function to compute the index", "A function to compress data", "A function to sort data", "A function to search data"],
+        "correctAnswer": "A function to compute the index",
+        "explanation": "A hash function takes an input (or 'key') and returns an index within an array or table where the value should be stored."
+    },
+    {
+        "question": "What is the primary advantage of using hashing?",
+        "options": ["It simplifies data structures", "It allows for sorted data", "It provides fast data retrieval", "It compresses data size"],
+        "correctAnswer": "It provides fast data retrieval",
+        "explanation": "The primary advantage of hashing is that it allows for fast data retrieval, typically in O(1) time."
+    },
+    {
+        "question": "What problem can occur with hashing?",
+        "options": ["Hash explosion", "Hash overflow", "Hash collision", "Hash underflow"],
+        "correctAnswer": "Hash collision",
+        "explanation": "A hash collision occurs when two keys hash to the same index in the hash table."
+    },
+    {
+        "question": "What is a hash table?",
+        "options": ["A table of hash values", "A table used to store data using key-value pairs", "A table of sorted values", "A table used for data compression"],
+        "correctAnswer": "A table used to store data using key-value pairs",
+        "explanation": "A hash table is a data structure that stores data in key-value pairs for fast access."
+    },
+    {
+        "question": "Which of the following is a method to handle collisions in hashing?",
+        "options": ["Chaining", "Sorting", "Searching", "Compressing"],
+        "correctAnswer": "Chaining",
+        "explanation": "Chaining is a method to handle collisions in hashing by using a linked list to store multiple items at the same index."
+    },
+    {
+        "question": "What is open addressing in hashing?",
+        "options": ["A method to handle collisions", "A method to compress data", "A method to sort data", "A method to expand hash table"],
+        "correctAnswer": "A method to handle collisions",
+        "explanation": "Open addressing is a method to handle collisions in a hash table by finding another open slot within the table."
+    },
+    {
+        "question": "Which of the following is not a type of open addressing?",
+        "options": ["Linear probing", "Quadratic probing", "Double hashing", "Binary probing"],
+        "correctAnswer": "Binary probing",
+        "explanation": "Linear probing, quadratic probing, and double hashing are types of open addressing, but binary probing is not."
+    },
+    {
+        "question": "What is the load factor in hashing?",
+        "options": ["The ratio of the number of elements to the hash table size", "The ratio of the hash table size to the number of elements", "The ratio of the hash function complexity to the table size", "The ratio of collisions to the hash table size"],
+        "correctAnswer": "The ratio of the number of elements to the hash table size",
+        "explanation": "The load factor is defined as the ratio of the number of elements stored in the hash table to the table's size, indicating how full the table is."
+    },
+    {
+        "question": "What happens when a hash table reaches its load factor threshold?",
+        "options": ["It compresses the data", "It expands and rehashes the elements", "It sorts the data", "It deletes half of the elements"],
+        "correctAnswer": "It expands and rehashes the elements",
+        "explanation": "When the load factor threshold is reached, the hash table typically expands (increases its size) and rehashes all the existing elements to the new table."
+    },
+    {
+        "question": "Which of the following statements is true about hashing?",
+        "options": ["Hashing guarantees O(1) time complexity for all operations", "Hashing can have O(n) time complexity in the worst case", "Hashing is only used for integers", "Hashing requires sorted data"],
+        "correctAnswer": "Hashing can have O(n) time complexity in the worst case",
+        "explanation": "While hashing generally provides O(1) time complexity, it can degrade to O(n) in the worst case, such as when many collisions occur."
+    },
+    {
+        "question": "What is double hashing?",
+        "options": ["A method that uses two hash functions", "A method that doubles the size of the hash table", "A method that compresses data twice", "A method that sorts data"],
+        "correctAnswer": "A method that uses two hash functions",
+        "explanation": "Double hashing is a collision resolution method that uses two different hash functions to compute the index for storing a key."
+    },
+    {
+        "question": "What type of hashing is used to minimize the number of collisions?",
+        "options": ["Perfect hashing", "Imperfect hashing", "Linear hashing", "Quadratic hashing"],
+        "correctAnswer": "Perfect hashing",
+        "explanation": "Perfect hashing is used to create a hash function that generates no collisions for a given set of keys."
+    },
+    {
+        "question": "Which of the following is not a collision resolution technique?",
+        "options": ["Chaining", "Open addressing", "Linear probing", "Binary search"],
+        "correctAnswer": "Binary search",
+        "explanation": "Binary search is not a collision resolution technique; it is used for searching in sorted arrays."
+    },
+    {
+        "question": "How does chaining handle hash collisions?",
+        "options": ["By storing colliding elements in a linked list", "By finding a new slot within the table", "By doubling the table size", "By using multiple hash functions"],
+        "correctAnswer": "By storing colliding elements in a linked list",
+        "explanation": "Chaining handles collisions by storing all elements that hash to the same index in a linked list."
+    },
+    {
+        "question": "What is the main disadvantage of open addressing?",
+        "options": ["Increased memory usage", "Increased time complexity for search", "Difficulty in deletion", "Need for multiple hash functions"],
+        "correctAnswer": "Increased time complexity for search",
+        "explanation": "Open addressing can lead to increased search time due to clustering, where consecutive slots may be occupied."
+    },
+    {
+        "question": "What is a common application of hash tables?",
+        "options": ["Sorting large datasets", "Balancing parentheses", "Implementing dictionaries", "Finding the shortest path"],
+        "correctAnswer": "Implementing dictionaries",
+        "explanation": "Hash tables are commonly used to implement dictionaries, which allow fast lookups, insertions, and deletions."
+    },
+    {
+        "question": "Which of the following is a good property of a hash function?",
+        "options": ["Low time complexity", "High load factor", "High collision rate", "Random input"],
+        "correctAnswer": "Low time complexity",
+        "explanation": "A good hash function has a low time complexity and produces a low number of collisions."
+    }
 
-<h1>Pretest</h1>
-<form id="quizForm">
-    <!-- Existing questions 1-10 -->
-    <div class="question">
-        <p>1. What is the main purpose of hashing?</p>
-        <label><input type="radio" name="q1" value="a"> a: Encryption</label><br>
-        <label><input type="radio" name="q1" value="b"> b: Data compression</label><br>
-        <label><input type="radio" name="q1" value="c"> c: Mapping data of any size to a fixed size</label><br>
-        <label><input type="radio" name="q1" value="d"> d: Sorting</label>
-        <div id="explanation1" class="explanation"></div>
-    </div>
 
-    <div class="question">
-        <p>2. What is a common characteristic of a good hash function?</p>
-        <label><input type="radio" name="q2" value="a"> a: Always produces different outputs for different inputs</label><br>
-        <label><input type="radio" name="q2" value="b"> b: Collides frequently</label><br>
-        <label><input type="radio" name="q2" value="c"> c: Is fast and easy to compute</label><br>
-        <label><input type="radio" name="q2" value="d"> d: Produces variable-length outputs</label>
-        <div id="explanation2" class="explanation"></div>
-    </div>
 
-    <div class="question">
-        <p>3. What is a hash collision?</p>
-        <label><input type="radio" name="q3" value="a"> a: Two inputs produce the same hash value</label><br>
-        <label><input type="radio" name="q3" value="b"> b: When a hash function is not reversible</label><br>
-        <label><input type="radio" name="q3" value="c"> c: A hash function that returns different outputs for different inputs</label><br>
-        <label><input type="radio" name="q3" value="d"> d: A secure hashing algorithm</label>
-        <div id="explanation3" class="explanation"></div>
-    </div>
-
-    <div class="question">
-        <p>4. Which of the following is a cryptographic hash function?</p>
-        <label><input type="radio" name="q4" value="a"> a: MD5</label><br>
-        <label><input type="radio" name="q4" value="b"> b: SHA-256</label><br>
-        <label><input type="radio" name="q4" value="c"> c: CRC32</label><br>
-        <label><input type="radio" name="q4" value="d"> d: LZW</label>
-        <div id="explanation4" class="explanation"></div>
-    </div>
-
-    <div class="question">
-        <p>5. Which of the following is NOT a property of a good hash function?</p>
-        <label><input type="radio" name="q5" value="a"> a: Deterministic</label><br>
-        <label><input type="radio" name="q5" value="b"> b: Minimizes collisions</label><br>
-        <label><input type="radio" name="q5" value="c"> c: Produces outputs of varying sizes</label><br>
-        <label><input type="radio" name="q5" value="d"> d: Efficient to compute</label>
-        <div id="explanation5" class="explanation"></div>
-    </div>
-
-    <div class="question">
-        <p>6. What does the term "pre-image resistance" mean in hashing?</p>
-        <label><input type="radio" name="q6" value="a"> a: It’s impossible to find two different inputs with the same hash</label><br>
-        <label><input type="radio" name="q6" value="b"> b: It’s difficult to find the input from the hash output</label><br>
-        <label><input type="radio" name="q6" value="c"> c: The function is fast</label><br>
-        <label><input type="radio" name="q6" value="d"> d: It’s impossible to reverse a hash</label>
-        <div id="explanation6" class="explanation"></div>
-    </div>
-
-    <div class="question">
-        <p>7. Which of the following hash functions is the strongest in terms of security?</p>
-        <label><input type="radio" name="q7" value="a"> a: SHA-1</label><br>
-        <label><input type="radio" name="q7" value="b"> b: SHA-256</label><br>
-        <label><input type="radio" name="q7" value="c"> c: MD5</label><br>
-        <label><input type="radio" name="q7" value="d"> d: SHA-0</label>
-        <div id="explanation7" class="explanation"></div>
-    </div>
-
-    <div class="question">
-        <p>8. Which of the following statements about hash functions is false?</p>
-        <label><input type="radio" name="q8" value="a"> a: A hash function always produces a fixed-size output</label><br>
-        <label><input type="radio" name="q8" value="b"> b: Hash functions can be used to store passwords securely</label><br>
-        <label><input type="radio" name="q8" value="c"> c: Hash functions are always reversible</label><br>
-        <label><input type="radio" name="q8" value="d"> d: Hash functions help ensure data integrity</label>
-        <div id="explanation8" class="explanation"></div>
-    </div>
-
-    <div class="question">
-        <p>9. What is double hashing?</p>
-        <label><input type="radio" name="q9" value="a"> a: Using two different hash functions for security</label><br>
-        <label><input type="radio" name="q9" value="b"> b: Applying the same hash function twice to the same input</label><br>
-        <label><input type="radio" name="q9" value="c"> c: Using two rounds of hashing for key distribution</label><br>
-        <label><input type="radio" name="q9" value="d"> d: Using a hash function for compression</label>
-        <div id="explanation9" class="explanation"></div>
-    </div>
-
-    <div class="question">
-        <p>10. In hash tables, what is the typical solution to handle hash collisions?</p>
-        <label><input type="radio" name="q10" value="a"> a: Use a larger hash size</label><br>
-        <label><input type="radio" name="q10" value="b"> b: Chaining</label><br>
-        <label><input type="radio" name="q10" value="c"> c: Quadratic probing</label><br>
-        <label><input type="radio" name="q10" value="d"> d: Both b and c</label>
-        <div id="explanation10" class="explanation"></div>
-    </div>
-
-    <!-- Additional questions 11-20 -->
-    <div class="question">
-        <p>11. Which of the following best describes SHA-3?</p>
-        <label><input type="radio" name="q11" value="a"> a: An update to SHA-256</label><br>
-        <label><input type="radio" name="q11" value="b"> b: A hashing standard unrelated to SHA-2</label><br>
-        <label><input type="radio" name="q11" value="c"> c: The latest version of MD5</label><br>
-        <label><input type="radio" name="q11" value="d"> d: Not yet released</label>
-        <div id="explanation11" class="explanation"></div>
-    </div>
-
-    <div class="question">
-        <p>12. Why is MD5 considered insecure?</p>
-        <label><input type="radio" name="q12" value="a"> a: Too slow</label><br>
-        <label><input type="radio" name="q12" value="b"> b: Prone to collisions</label><br>
-        <label><input type="radio" name="q12" value="c"> c: Too complex</label><br>
-        <label><input type="radio" name="q12" value="d"> d: Produces variable-length outputs</label>
-        <div id="explanation12" class="explanation"></div>
-    </div>
-
-    <div class="question">
-        <p>13. Which property of hashing prevents finding two distinct inputs with the same output?</p>
-        <label><input type="radio" name="q13" value="a"> a: Collision resistance</label><br>
-        <label><input type="radio" name="q13" value="b"> b: Pre-image resistance</label><br>
-        <label><input type="radio" name="q13" value="c"> c: Avalanche effect</label><br>
-        <label><input type="radio" name="q13" value="d"> d: Reversibility</label>
-        <div id="explanation13" class="explanation"></div>
-    </div>
-
-    <div class="question">
-        <p>14. What is the avalanche effect in hashing?</p>
-        <label><input type="radio" name="q14" value="a"> a: Hashes are unpredictable</label><br>
-        <label><input type="radio" name="q14" value="b"> b: Small input change causes large output change</label><br>
-        <label><input type="radio" name="q14" value="c"> c: Produces fixed-size output</label><br>
-        <label><input type="radio" name="q14" value="d"> d: Hash function reversibility</label>
-        <div id="explanation14" class="explanation"></div>
-    </div>
-
-    <div class="question">
-        <p>15. In what scenario is hashing most commonly used?</p>
-        <label><input type="radio" name="q15" value="a"> a: Encrypting messages</label><br>
-        <label><input type="radio" name="q15" value="b"> b: Storing passwords</label><br>
-        <label><input type="radio" name="q15" value="c"> c: Sorting data</label><br>
-        <label><input type="radio" name="q15" value="d"> d: Compressing files</label>
-        <div id="explanation15" class="explanation"></div>
-    </div>
-
-    <div class="question">
-        <p>16. Which hashing algorithm produces the shortest output size?</p>
-        <label><input type="radio" name="q16" value="a"> a: SHA-256</label><br>
-        <label><input type="radio" name="q16" value="b"> b: MD5</label><br>
-        <label><input type="radio" name="q16" value="c"> c: SHA-1</label><br>
-        <label><input type="radio" name="q16" value="d"> d: SHA-512</label>
-        <div id="explanation16" class="explanation"></div>
-    </div>
-
-    <div class="question">
-        <p>17. Which of these is a non-cryptographic hash function?</p>
-        <label><input type="radio" name="q17" value="a"> a: SHA-1</label><br>
-        <label><input type="radio" name="q17" value="b"> b: SHA-256</label><br>
-        <label><input type="radio" name="q17" value="c"> c: MD5</label><br>
-        <label><input type="radio" name="q17" value="d"> d: MurmurHash</label>
-        <div id="explanation17" class="explanation"></div>
-    </div>
-
-    <div class="question">
-        <p>18. Why is it difficult to reverse a good hash function?</p>
-        <label><input type="radio" name="q18" value="a"> a: Fixed-size output</label><br>
-        <label><input type="radio" name="q18" value="b"> b: Many-to-one mapping</label><br>
-        <label><input type="radio" name="q18" value="c"> c: Variable output length</label><br>
-        <label><input type="radio" name="q18" value="d"> d: Complex mathematics</label>
-        <div id="explanation18" class="explanation"></div>
-    </div>
-
-    <div class="question">
-        <p>19. Which algorithm does Bitcoin use for its hashing process?</p>
-        <label><input type="radio" name="q19" value="a"> a: MD5</label><br>
-        <label><input type="radio" name="q19" value="b"> b: SHA-1</label><br>
-        <label><input type="radio" name="q19" value="c"> c: SHA-256</label><br>
-        <label><input type="radio" name="q19" value="d"> d: SHA-512</label>
-        <div id="explanation19" class="explanation"></div>
-    </div>
-
-    <div class="question">
-        <p>20. Which of the following is a characteristic of a cryptographic hash function?</p>
-        <label><input type="radio" name="q20" value="a"> a: Reversible</label><br>
-        <label><input type="radio" name="q20" value="b"> b: Slow to compute</label><br>
-        <label><input type="radio" name="q20" value="c"> c: Pre-image resistant</label><br>
-        <label><input type="radio" name="q20" value="d"> d: Randomized output</label>
-        <div id="explanation20" class="explanation"></div>
-    </div>
-
-    <button type="button" class="submit-button" onclick="submitQuiz()">Submit</button>
-</form>
-<script src="script.js"></script>
+        ];
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+        function displayRandomQuestions() {
+            const quizContainer = document.getElementById("quizForm");
+            quizContainer.innerHTML = "";
+            shuffle(questions);
+            const selectedQuestions = questions.slice(0, 5);
+            selectedQuestions.forEach((q, index) => {
+                const questionHTML = `
+                    <div class="question">
+                        <p>${index + 1}. ${q.question}</p>
+                        ${q.options.map((option, i) => `<label><input type="radio" name="q${index + 1}" value="${option}"> ${option}</label><br>`).join('')}
+                        <div id="explanation${index + 1}" class="explanation"></div>
+                    </div>
+                `;
+                quizContainer.innerHTML += questionHTML;
+            });
+            quizContainer.innerHTML += `<button type="button" class="submit-button" onclick="submitQuiz()">Submit</button>`;
+        }
+        window.onload = displayRandomQuestions;
+        function submitQuiz() {
+            const explanations = document.querySelectorAll('.explanation');
+            explanations.forEach(exp => exp.innerHTML = "");
+            const selectedQuestions = questions.slice(0, 5);
+            selectedQuestions.forEach((q, index) => {
+                const selectedOption = document.querySelector(`input[name="q${index + 1}"]:checked`);
+                const explanationElement = document.getElementById(`explanation${index + 1}`);
+                if (selectedOption && selectedOption.value === q.correctAnswer) {
+                    createBox(true, `Correct! ${q.explanation}`, explanationElement);
+                } else {
+                    createBox(false, `Incorrect. The correct answer is: ${q.correctAnswer}. ${q.explanation}`, explanationElement);
+                }
+            });
+        }
+        function createBox(isCorrect, message, explanationElement) {
+            const box = document.createElement('div');
+            box.className = `explanation-box ${isCorrect ? 'correct-box' : 'incorrect-box'}`;
+            box.innerText = message;
+            explanationElement.appendChild(box);
+        }
+    </script>
 </body>
 </html>
